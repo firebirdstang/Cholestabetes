@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Cholestabetes.Web
 {
-    public partial class _Default : BasePage 
+    public partial class _Default : BasePage  
     {
 
 
