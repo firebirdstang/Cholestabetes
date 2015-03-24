@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cholestabetes.Data", "Cholestabetes.Data\Cholestabetes.Data.csproj", "{7D18ED5F-8C56-4A19-BC29-01385FFAA18E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cholestabetes.Web", "..\Cholestabetes.Web\Cholestabetes.Web.csproj", "{E9781A69-3E2E-4DC9-8828-D5AC20FE62C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cholestabetes.Repositories", "..\Cholestabetes.Repositories\Cholestabetes.Repositories.csproj", "{C9EC5F46-883F-41C9-920D-D4718E9E25C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cholestabetes.Domain", "..\Cholestabetes.Domain\Cholestabetes.Domain.csproj", "{87EB2144-DE12-4284-9B4B-6836A924CB5F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D18ED5F-8C56-4A19-BC29-01385FFAA18E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D18ED5F-8C56-4A19-BC29-01385FFAA18E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D18ED5F-8C56-4A19-BC29-01385FFAA18E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D18ED5F-8C56-4A19-BC29-01385FFAA18E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9781A69-3E2E-4DC9-8828-D5AC20FE62C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9781A69-3E2E-4DC9-8828-D5AC20FE62C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9781A69-3E2E-4DC9-8828-D5AC20FE62C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9781A69-3E2E-4DC9-8828-D5AC20FE62C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9EC5F46-883F-41C9-920D-D4718E9E25C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9EC5F46-883F-41C9-920D-D4718E9E25C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9EC5F46-883F-41C9-920D-D4718E9E25C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9EC5F46-883F-41C9-920D-D4718E9E25C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87EB2144-DE12-4284-9B4B-6836A924CB5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87EB2144-DE12-4284-9B4B-6836A924CB5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87EB2144-DE12-4284-9B4B-6836A924CB5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87EB2144-DE12-4284-9B4B-6836A924CB5F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

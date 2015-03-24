@@ -1,0 +1,273 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Cholestabetes.Web.SiteMaster" %>
+
+<%@ Register Src="~/Controls/PhysicianSpeceficRequirements.ascx" TagName="PhyRequirements"
+    TagPrefix="uc" %>
+<%@ Register Src="~/Controls/Registration.ascx" TagName="Registration" TagPrefix="uc" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"
+        type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+    <div id="wrapper">
+        <div id="header">
+            <table width="97%" border="0">
+                <tr>
+                    <td>
+                        <asp:Image ImageUrl="~/images/logo.png" runat="server" />
+                    </td>
+                    <td align="right" style="font-family: Arial, Helvetica, sans-serif; color: #900;
+                        font-size: 17px; font-weight: 600; text-align: right">
+                        <div class="loginDisplay">
+                            <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                                <AnonymousTemplate>
+                                    <%--[ <a href="~/Account/Login.aspx" id="HeadLoginStatus" runat="server">Log In</a>
+                                    ]--%>
+                                    <uc:Registration runat="server" ID="userReg" />
+                                </AnonymousTemplate>
+                                <LoggedInTemplate>
+                                    Welcome <span class="bold">
+                                        <%--        <asp:LoginName ID="HeadLoginName" runat="server"   />--%>
+                                        <asp:Label runat="server" ID="lblPhysicianName" />
+                                    </span>
+                                    <%--<img src="../images/Valeant_logo.png" alt="Alternate Text" />--%>
+                                    <br />
+                                    <asp:HyperLink NavigateUrl="~/Default.aspx" runat="server" ImageUrl="~/images/home_button.png" />
+                                    <asp:HyperLink NavigateUrl="#" runat="server" ImageUrl="~/images/contact_button.png" />
+                                    <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out"
+                                        LogoutPageUrl="~/" LogoutImageUrl="~/images/logout_button.png" />
+                                </LoggedInTemplate>
+                            </asp:LoginView>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!--end of header-->
+        <div id="portal" runat="server">
+            <asp:ImageButton ID="imgPortal" ImageUrl="~/images/ecrf-portal-button-dimmed.png"
+                runat="server" OnClick="imgPortal_clicked" />
+        </div>
+        <!--end of portal-->
+        <div id="body">
+            <div style="width: 100%;">
+                <table width="100%" border="0" cellpadding="10">
+                    <tr>
+                        <td>
+                            <asp:Image ImageUrl="~/images/new_title.png" runat="server" />
+                        </td>
+                        <td>
+                            <span style="font-family: Arial, Helvetica, sans-serif"><strong>February 18, 2015</strong><br />
+                                (7:00 - 8:00pm EST)</span>
+                        </td>
+                        <td>
+                            <a href="https://attendee.gotowebinar.com/register/6741175423565740801 " target="_blank">
+                                <asp:Image ID="Image3" ImageUrl="~/images/new_register_button.png" runat="server" />
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="left" runat="server">
+                <table width="100%" cellspacing="0" cellpadding="7" style="font-family: Arial, Helvetica, sans-serif;
+                    font-size: 13px; border: #000; border-style: solid; border-width: medium; border-radius: 14px 14px 0px 0px">
+                    <tr>
+                        <td colspan="2" style="background-color: #000; border-radius: 10px 10px 0px 0px;
+                            text-align: center">
+                            <strong class="whitemedium">INSTRUCTIONS</strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #FFF">
+                            User Guide and Instructions
+                        </td>
+                        <td style="background-color: #FFF">
+                            <asp:HyperLink ID="HyperLink7" NavigateUrl="#" runat="server" ImageUrl="~/images/icon_enter.png" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="background-color: #000; text-align: center">
+                            <span class="whitemedium"><strong>PHYSICIAN SPECIFIC REQUIREMENTS</strong></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="whitesmall" style="background-color: #900; text-align: center">
+                            <strong>YOUR ACTION ITEMS</strong>
+                        </td>
+                    </tr>
+                    <uc:PhyRequirements runat="server" ID="actionItem"></uc:PhyRequirements>
+                    <tr>
+                        <td colspan="2" style="background-color: #000; text-align: center">
+                            <span class="whitemedium"><strong>CHOLESTABETES QuERI<br />
+                                DOCUMENTS & FORMS</strong></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #FFF">
+                            <asp:HyperLink ID="HyperLink1" Text="CHOLESTABETES QuERI Program Overview" NavigateUrl="~/PDF/CHOLESTABETES QuERI_PROGRAM OVERVIEW.pdf"
+                                runat="server" Target="_blank" CssClass="actionItem" />
+                        </td>
+                        <td style="background-color: #FFF">
+                            <asp:HyperLink ImageUrl="~/images/icon_download.png" NavigateUrl="~/PDF/CHOLESTABETES QuERI_PROGRAM OVERVIEW.pdf"
+                                runat="server" Target="_blank" CssClass="actionItem" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #FFF">
+                            <asp:HyperLink Text="CHOLESTABETES QuERI Protocol" NavigateUrl="~/PDF/CHOLESTABETES Protocol_Final.pdf"
+                                runat="server" Target="_blank" CssClass="actionItem" />
+                        </td>
+                        <td style="background-color: #FFF">
+                            <asp:HyperLink ImageUrl="~/images/icon_download.png" NavigateUrl="~/PDF/CHOLESTABETES Protocol_Final.pdf"
+                                runat="server" Target="_blank" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #FFF">
+                            <asp:HyperLink NavigateUrl="~/PDF/CERB_Approval Letter.pdf" runat="server" Target="_blank"
+                                CssClass="actionItem" Text="Central Ethics Approval Letter" />
+                        </td>
+                        <td style="background-color: #FFF">
+                            <asp:HyperLink ID="HyperLink4" NavigateUrl="~/PDF/CERB_Approval Letter.pdf" runat="server"
+                                Target="_blank" CssClass="actionItem" ImageUrl="~/images/icon_download.png" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #FFF">
+                            <asp:HyperLink ID="HyperLink2" NavigateUrl="~/Physician/ICF.aspx" runat="server"
+                                Target="_blank" CssClass="actionItem" Text="Informed Consent Form (ICF) and Instructions" />
+                        </td>
+                        <td style="background-color: #FFF">
+                            <asp:HyperLink ID="HyperLink3" NavigateUrl="~/Physician/ICF.aspx" ImageUrl="~/images/icon_download.png"
+                                runat="server" Target="_blank" CssClass="actionItem" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="background-color: #000; text-align: center">
+                            <span class="whitemedium"><strong>SUPPORTING FUNCTIONS</strong></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #FFF">
+                            Payment Summary Report
+                        </td>
+                        <td style="background-color: #FFF">
+                            <asp:HyperLink NavigateUrl="#" runat="server" ImageUrl="~/images/icon_download.png" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="background-color: #000; text-align: center">
+                            <span class="whitemedium"><strong>GENERAL DOCUMENTS & MATERIALS</strong></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #FFF">
+                            References and Supporting Materials
+                        </td>
+                        <td style="background-color: #FFF">
+                            <asp:HyperLink ID="HyperLink5" NavigateUrl="#" runat="server" ImageUrl="~/images/icon_enter.png" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #FFF">
+                            Multimedia
+                        </td>
+                        <td style="background-color: #FFF">
+                            <asp:HyperLink ID="HyperLink6" NavigateUrl="#" runat="server" ImageUrl="~/images/icon_media.png" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!--end of left-->
+            <div id="right">
+                <div id="content">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                </div>
+                <!--end of content-->
+            </div>
+            <!--end of right-->
+            <div style="clear: both">
+            </div>
+            <div id="footer">
+                <table width="100%" border="0">
+                    <tr>
+                        <td width="20%">
+                            <asp:Image ImageUrl="~/images/chrc_logo.png" runat="server" />
+                        </td>
+                        <td style="font-family: Arial, Helvetica, sans-serif;">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="font-family: Arial, Helvetica, sans-serif">
+                                <tr>
+                                    <td width="40%" style="font-size: 14px">
+                                        <strong>Lianne Goldin</strong>
+                                    </td>
+                                    <td width="30%" style="font-size: 14px">
+                                        <strong>Dija Chang Kit</strong>
+                                    </td>
+                                    <td width="30%" style="font-size: 14px">
+                                        <strong>Elana Dikchtein</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 10px">
+                                        Executive Director, Department of Continuing Medical Education<br />
+                                        <br />
+                                    </td>
+                                    <td style="font-size: 10px">
+                                        Project Leader<br />
+                                        <br />
+                                    </td>
+                                    <td style="font-size: 10px">
+                                        Project Coordinator<br />
+                                        <br />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 10px;">
+                                        <a href="mailto:lgoldin@CHRC.net" class="emailLink">
+                                            <asp:Image ImageUrl="~/images/icon1.png" runat="server" valign="middle" />
+                                            lgoldin@CHRC.net</a>
+                                    </td>
+                                    <td style="font-size: 10px;">
+                                        <a href="mailto:changkitdija@chrc.net" class="emailLink">
+                                            <asp:Image ImageUrl="~/images/icon1.png" runat="server" valign="middle" />
+                                            changkitdija@chrc.net</a>
+                                    </td>
+                                    <td style="font-size: 10px;">
+                                        <a href="mailto:dikchteine@chrc.net" class="emailLink">
+                                            <asp:Image ImageUrl="~/images/icon1.png" runat="server" valign="middle" />
+                                            dikchteine@chrc.net</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 10px;">
+                                        <asp:Image ImageUrl="~/images/icon2.png" runat="server" valign="middle" />
+                                        416.977.8010 ext 229
+                                    </td>
+                                    <td style="font-size: 10px;">
+                                        <asp:Image ID="Image1" ImageUrl="~/images/icon2.png" runat="server" valign="middle" />
+                                        416.977.8010 ext 296
+                                    </td>
+                                    <td style="font-size: 10px;">
+                                        <asp:Image ID="Image2" ImageUrl="~/images/icon2.png" runat="server" valign="middle" />
+                                        416.977.8010 ext 291
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!--end of body-->
+    </div>
+    </form>
+</body>
+</html>

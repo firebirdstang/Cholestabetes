@@ -1,0 +1,162 @@
+﻿<error errorId="d9d671a0-4b66-44ab-b663-76aa6410e77e" application="/" host="IT-L-MAQSOOD" type="System.Exception" message="Test" source="Cholestabetes.Web" detail="System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---&gt; System.Exception: Test&#xD;&#xA;   at Cholestabetes.Web._Default.Page_Load(Object sender, EventArgs e) in C:\Users\khanm\Documents\Visual Studio 2010\Projects\Cholestabetes_new\Cholestabetes.Web\Default.aspx.cs:line 16&#xD;&#xA;   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)&#xD;&#xA;   at System.Web.UI.Control.OnLoad(EventArgs e)&#xD;&#xA;   at Cholestabetes.Web.BasePage.OnLoad(EventArgs e) in C:\Users\khanm\Documents\Visual Studio 2010\Projects\Cholestabetes_new\Cholestabetes.Web\BasePage.cs:line 40&#xD;&#xA;   at System.Web.UI.Control.LoadRecursive()&#xD;&#xA;   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)&#xD;&#xA;   at System.Web.UI.Page.HandleError(Exception e)&#xD;&#xA;   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)&#xD;&#xA;   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)&#xD;&#xA;   at System.Web.UI.Page.ProcessRequest()&#xD;&#xA;   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)&#xD;&#xA;   at System.Web.UI.Page.ProcessRequest(HttpContext context)&#xD;&#xA;   at ASP.default_aspx.ProcessRequest(HttpContext context) in c:\Users\khanm\AppData\Local\Temp\Temporary ASP.NET Files\root\e8a8c19f\b3286da6\App_Web_h3jccamj.0.cs:line 0&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="testingmax2" time="2014-10-01T14:02:15.7800174Z" statusCode="500" webHostHtmlMessage="&lt;!DOCTYPE html&gt;&#xD;&#xA;&lt;html&gt;&#xD;&#xA;    &lt;head&gt;&#xD;&#xA;        &lt;title&gt;Test&lt;/title&gt;&#xD;&#xA;        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;&#xD;&#xA;        &lt;style&gt;&#xD;&#xA;         body {font-family:&quot;Verdana&quot;;font-weight:normal;font-size: .7em;color:black;} &#xD;&#xA;         p {font-family:&quot;Verdana&quot;;font-weight:normal;color:black;margin-top: -5px}&#xD;&#xA;         b {font-family:&quot;Verdana&quot;;font-weight:bold;color:black;margin-top: -5px}&#xD;&#xA;         H1 { font-family:&quot;Verdana&quot;;font-weight:normal;font-size:18pt;color:red }&#xD;&#xA;         H2 { font-family:&quot;Verdana&quot;;font-weight:normal;font-size:14pt;color:maroon }&#xD;&#xA;         pre {font-family:&quot;Consolas&quot;,&quot;Lucida Console&quot;,Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}&#xD;&#xA;         .marker {font-weight: bold; color: black;text-decoration: none;}&#xD;&#xA;         .version {color: gray;}&#xD;&#xA;         .error {margin-bottom: 10px;}&#xD;&#xA;         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }&#xD;&#xA;         @media screen and (max-width: 639px) {&#xD;&#xA;          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }&#xD;&#xA;         }&#xD;&#xA;         @media screen and (max-width: 479px) {&#xD;&#xA;          pre { width: 280px; }&#xD;&#xA;         }&#xD;&#xA;        &lt;/style&gt;&#xD;&#xA;    &lt;/head&gt;&#xD;&#xA;&#xD;&#xA;    &lt;body bgcolor=&quot;white&quot;&gt;&#xD;&#xA;&#xD;&#xA;            &lt;span&gt;&lt;H1&gt;Server Error in '/' Application.&lt;hr width=100% size=1 color=silver&gt;&lt;/H1&gt;&#xD;&#xA;&#xD;&#xA;            &lt;h2&gt; &lt;i&gt;Test&lt;/i&gt; &lt;/h2&gt;&lt;/span&gt;&#xD;&#xA;&#xD;&#xA;            &lt;font face=&quot;Arial, Helvetica, Geneva, SunSans-Regular, sans-serif &quot;&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt; Description: &lt;/b&gt;An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code.&#xD;&#xA;&#xD;&#xA;            &lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt; Exception Details: &lt;/b&gt;System.Exception: Test&lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt;Source Error:&lt;/b&gt; &lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;table width=100% bgcolor=&quot;#ffffcc&quot;&gt;&#xD;&#xA;               &lt;tr&gt;&#xD;&#xA;                  &lt;td&gt;&#xD;&#xA;                      &lt;code&gt;&lt;pre&gt;&#xD;&#xA;&#xD;&#xA;Line 14:         protected void Page_Load(object sender, EventArgs e)&#xD;&#xA;Line 15:         {&#xD;&#xA;&lt;font color=red&gt;Line 16:             throw new Exception(&amp;quot;Test&amp;quot;); &#xD;&#xA;&lt;/font&gt;Line 17:         }&#xD;&#xA;Line 18:     }&lt;/pre&gt;&lt;/code&gt;&#xD;&#xA;&#xD;&#xA;                  &lt;/td&gt;&#xD;&#xA;               &lt;/tr&gt;&#xD;&#xA;            &lt;/table&gt;&#xD;&#xA;&#xD;&#xA;            &lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt; Source File: &lt;/b&gt; C:\Users\khanm\Documents\Visual Studio 2010\Projects\Cholestabetes_new\Cholestabetes.Web\Default.aspx.cs&lt;b&gt; &amp;nbsp;&amp;nbsp; Line: &lt;/b&gt; 16&#xD;&#xA;            &lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt;Stack Trace:&lt;/b&gt; &lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;table width=100% bgcolor=&quot;#ffffcc&quot;&gt;&#xD;&#xA;               &lt;tr&gt;&#xD;&#xA;                  &lt;td&gt;&#xD;&#xA;                      &lt;code&gt;&lt;pre&gt;&#xD;&#xA;&#xD;&#xA;[Exception: Test]&#xD;&#xA;   Cholestabetes.Web._Default.Page_Load(Object sender, EventArgs e) in C:\Users\khanm\Documents\Visual Studio 2010\Projects\Cholestabetes_new\Cholestabetes.Web\Default.aspx.cs:16&#xD;&#xA;   System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e) +51&#xD;&#xA;   System.Web.UI.Control.OnLoad(EventArgs e) +92&#xD;&#xA;   Cholestabetes.Web.BasePage.OnLoad(EventArgs e) in C:\Users\khanm\Documents\Visual Studio 2010\Projects\Cholestabetes_new\Cholestabetes.Web\BasePage.cs:40&#xD;&#xA;   System.Web.UI.Control.LoadRecursive() +54&#xD;&#xA;   System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) +772&#xD;&#xA;&lt;/pre&gt;&lt;/code&gt;&#xD;&#xA;&#xD;&#xA;                  &lt;/td&gt;&#xD;&#xA;               &lt;/tr&gt;&#xD;&#xA;            &lt;/table&gt;&#xD;&#xA;&#xD;&#xA;            &lt;br&gt;&#xD;&#xA;&#xD;&#xA;    &lt;/body&gt;&#xD;&#xA;&lt;/html&gt;&#xD;&#xA;">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:Keep-Alive&#xD;&#xA;HTTP_ACCEPT:text/html, application/xhtml+xml, */*&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:en-US&#xD;&#xA;HTTP_COOKIE:.ASPXAUTH=3273D958A4AF196D40945F2911074BB132D682BF17E55DC29D1977C8C7B9F3F39E911D4902FB1A6474B6756E77CA2517C5BC45055F8025B3115204F6E758AAB9974F96B4FA5CA2DAE85E0D1E426F65C0469965BB11838EEE03F90748B9AA79C5892316876E976A260B17C8CB10413EF505264BFAD7364B61D694585CAEA4ACE01FFDAB286AA0B33867AC24495AD82AE5C065CD91819BEF8B5BCBF16E7B0B256E&#xD;&#xA;HTTP_HOST:localhost:50791&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; ASU2JS; rv:11.0) like Gecko&#xD;&#xA;HTTP_DNT:1&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: Keep-Alive&#xD;&#xA;Accept: text/html, application/xhtml+xml, */*&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Accept-Language: en-US&#xD;&#xA;Cookie: .ASPXAUTH=3273D958A4AF196D40945F2911074BB132D682BF17E55DC29D1977C8C7B9F3F39E911D4902FB1A6474B6756E77CA2517C5BC45055F8025B3115204F6E758AAB9974F96B4FA5CA2DAE85E0D1E426F65C0469965BB11838EEE03F90748B9AA79C5892316876E976A260B17C8CB10413EF505264BFAD7364B61D694585CAEA4ACE01FFDAB286AA0B33867AC24495AD82AE5C065CD91819BEF8B5BCBF16E7B0B256E&#xD;&#xA;Host: localhost:50791&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; ASU2JS; rv:11.0) like Gecko&#xD;&#xA;DNT: 1&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="C:\Users\khanm\Documents\Visual Studio 2010\Projects\Cholestabetes_new\Cholestabetes.Web\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="Forms" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="testingmax2" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="*****" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="CTU\khanm" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="testingmax2" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="" />
+    </item>
+    <item name="HTTPS">
+      <value string="" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Default.aspx" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="C:\Users\khanm\Documents\Visual Studio 2010\Projects\Cholestabetes_new\Cholestabetes.Web\Default.aspx" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Default.aspx" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="50791" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="" />
+    </item>
+    <item name="URL">
+      <value string="/Default.aspx" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="Keep-Alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html, application/xhtml+xml, */*" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="en-US" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string=".ASPXAUTH=3273D958A4AF196D40945F2911074BB132D682BF17E55DC29D1977C8C7B9F3F39E911D4902FB1A6474B6756E77CA2517C5BC45055F8025B3115204F6E758AAB9974F96B4FA5CA2DAE85E0D1E426F65C0469965BB11838EEE03F90748B9AA79C5892316876E976A260B17C8CB10413EF505264BFAD7364B61D694585CAEA4ACE01FFDAB286AA0B33867AC24495AD82AE5C065CD91819BEF8B5BCBF16E7B0B256E" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:50791" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; ASU2JS; rv:11.0) like Gecko" />
+    </item>
+    <item name="HTTP_DNT">
+      <value string="1" />
+    </item>
+  </serverVariables>
+  <cookies>
+    <item name=".ASPXAUTH">
+      <value string="3273D958A4AF196D40945F2911074BB132D682BF17E55DC29D1977C8C7B9F3F39E911D4902FB1A6474B6756E77CA2517C5BC45055F8025B3115204F6E758AAB9974F96B4FA5CA2DAE85E0D1E426F65C0469965BB11838EEE03F90748B9AA79C5892316876E976A260B17C8CB10413EF505264BFAD7364B61D694585CAEA4ACE01FFDAB286AA0B33867AC24495AD82AE5C065CD91819BEF8B5BCBF16E7B0B256E" />
+    </item>
+  </cookies>
+</error>

@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7D18ED5F-8C56-4A19-BC29-01385FFAA18E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cholestabetes.Data</RootNamespace>
+    <AssemblyName>Cholestabetes.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <Private>False</Private>
+      <HintPath>..\Cholestabetes.Web\DLLs\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Answer.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cholestabetes.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cholestabetes.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cholestabetes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cholestabetes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cholestabetes.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="InviteesMaster.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Patient.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PatientAnswer.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PatientQuestion.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PatientQuestionAnswer.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PatientVisit.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PayeeInfo.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Province.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Question.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationCode.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationStatu.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Role.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GetEnrollmentSummary_Result.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GetEnrollmentSummary_Result1.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GetPage4ValuesSec_Result.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GetPage4Values_Result.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GetPatientName_Result.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GetPatientsByPhysican_Result.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GetPatientStatusByPhysican_Result.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GetPatientStatusByPhysican_Result1.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GetPatientStatusByPhysican_Result2.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GetPatientStatusByPhysican_Result3.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GetPatientStatusByPhysican_Result4.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GetPayeeList_Result.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GetPayeeList_Result1.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GetPayeeList_Result2.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GetPayeeList_Result3.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GetPayeeList_Result4.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GetPayeeLst_Result.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GetPendingNotifications_Result.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GetPendingNotifications_Result1.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GetQuestionsAnswersByScreen_Result.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GetQuestionsAnswers_Result.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GetRegisteredPhysicanList_Result.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GetVisit1Screen1_Result.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GetVisit1Screen2_Result.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GetVisit1Screen3_Result.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GetVisit1Screen4_Result.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GetVisit1Screen5_Result.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GetVisit1Screen6_Result.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GetVisit1_Result.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GetVisit1_Result1.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserAnswer.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserRegistration.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Visit.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VisitReminder.cs">
+      <DependentUpon>Cholestabetes.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Cholestabetes.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Cholestabetes.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="Cholestabetes.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Cholestabetes.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Cholestabetes.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Cholestabetes.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

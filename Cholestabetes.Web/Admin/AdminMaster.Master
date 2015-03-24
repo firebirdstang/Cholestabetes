@@ -1,0 +1,170 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMaster.master.cs"
+    Inherits="Cholestabetes.Web.Admin.AdminMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <link href="../Styles/Site.css" rel="stylesheet" type="text/css" />
+    <link href="../Styles/jquery.fancybox.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" />
+    <script type="text/javascript" src="../Scripts/jquery.fancybox.pack.js"></script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function () {
+
+            $(".fancybox1").fancybox({
+                'width': '700px',
+                'height': '800px',
+                'autoScale': false,
+                'transitionIn': 'none',
+                'transitionOut': 'none',
+                'type': 'iframe',
+                'onClosed': function () {
+                    alert("onclosed");
+                    window.location.reload(true);
+                },
+                'onCleanup': function () {
+                    alert("oncleanup");
+                    return window.location.reload();
+                }
+            });
+
+            $(".fancybox2").fancybox({
+                openEffect: 'none',
+                closeEffect: 'none'
+
+
+
+            });
+        });
+
+    </script>
+    <form id="Form1" runat="server">
+    <div id="wrapper">
+        <div id="header">
+            <table width="97%" border="0">
+                <tr>
+                    <td>
+                        <img src="../images/logo.png" />
+                    </td>
+                    <td align="right" style="font-family: Arial, Helvetica, sans-serif; color: #900;
+                        font-size: 17px; font-weight: 600; text-align: right">
+                        <div class="loginDisplay">
+                            <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                                <AnonymousTemplate>
+                                    <%--[ <a href="~/Account/Login.aspx" id="HeadLoginStatus" runat="server">Log In</a>
+                                    ]--%>
+                                </AnonymousTemplate>
+                                <LoggedInTemplate>
+                                    <%--Welcome--%>
+                                    <span class="bold">
+                                        <%--<asp:LoginName ID="HeadLoginName" runat="server" />--%>
+                                    </span>
+                                    <asp:Image ImageUrl="~/images/Valeant_logo.png" runat="server" ID="imgLogo" />
+                                    <br />
+                                    <img src="../images/home_button.png" /><img src="../images/contact_button.png" />
+                                    <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out"
+                                        LogoutPageUrl="~/" LogoutImageUrl="~/images/logout_button.png" />
+                                </LoggedInTemplate>
+                            </asp:LoginView>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!--end of header-->
+        <div id="portal" runat="server">
+            <asp:HyperLink ID="hlPortal" Enabled="false" NavigateUrl="navigateurl" runat="server"
+                Visible="false" ImageUrl="~/images/PORTAL_button.png" />
+        </div>
+        <!--end of portal-->
+        <div id="body">
+            <div id="right">
+                <div id="content">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                </div>
+                <!--end of content-->
+            </div>
+            <!--end of right-->
+            <div style="clear: both">
+            </div>
+            <div id="footer">
+                <table width="100%" border="0">
+                    <tr>
+                        <td width="20%">
+                            <img src="../images/chrc_logo.png" />
+                        </td>
+                        <td style="font-family: Arial, Helvetica, sans-serif;">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="font-family: Arial, Helvetica, sans-serif">
+                                <tr>
+                                    <td width="40%" style="font-size: 14px">
+                                        <strong>Lianne Goldin</strong>
+                                    </td>
+                                    <td width="30%" style="font-size: 14px">
+                                        <strong>Dija Chang Kit</strong>
+                                    </td>
+                                    <td width="30%" style="font-size: 14px">
+                                        <strong>Elana Dikchtein</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 10px">
+                                        Executive Director, Department of Continuing Medical Education<br />
+                                        <br />
+                                    </td>
+                                    <td style="font-size: 10px">
+                                        Project Leader<br />
+                                        <br />
+                                    </td>
+                                    <td style="font-size: 10px">
+                                        Project Coordinator<br />
+                                        <br />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 10px;">
+                                        <a href="mailto:lgoldin@CHRC.net" class="emailLink">
+                                            <asp:Image ID="Image1" ImageUrl="~/images/icon1.png" runat="server" valign="middle" />
+                                            lgoldin@CHRC.net</a>
+                                    </td>
+                                    <td style="font-size: 10px;">
+                                        <a href="mailto:changkitdija@chrc.net" class="emailLink">
+                                            <asp:Image ID="Image2" ImageUrl="~/images/icon1.png" runat="server" valign="middle" />
+                                            changkitdija@chrc.net</a>
+                                    </td>
+                                    <td style="font-size: 10px;">
+                                        <a href="mailto:dikchteine@chrc.net" class="emailLink">
+                                            <asp:Image ID="Image3" ImageUrl="~/images/icon1.png" runat="server" valign="middle" />
+                                            dikchteine@chrc.net</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 10px;">
+                                        <img src="../images/icon2.png" valign="middle" />
+                                        416.977.8010 ext 229
+                                    </td>
+                                    <td style="font-size: 10px;">
+                                        <img src="../images/icon2.png" valign="middle" />
+                                        416.977.8010 ext 296
+                                    </td>
+                                    <td style="font-size: 10px;">
+                                        <img src="../images/icon2.png" valign="middle" />
+                                        416.977.8010 ext 291
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!--end of body-->
+    </div>
+    </form>
+</body>
+</html>

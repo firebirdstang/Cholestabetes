@@ -1,0 +1,31 @@
+﻿<Window x:Class="Cholestabetes.EncryptionApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Encryption Decryption Utility" Height="350" Width="779" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors">
+    <Grid Name="mainGrd" Background="#FF0C0C0D">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="250" />
+        </Grid.ColumnDefinitions>
+        <Button Name="btnEncrypt" Content="Encrypt" Height="23" HorizontalAlignment="Center" Margin="79,98,76,0"   VerticalAlignment="Top" Width="103" Grid.Column="1" Click="btnEncrypt_Click" />
+        <Button Name="btnDecrypt" Content="Decrypt" Height="23" HorizontalAlignment="Center" Margin="79,160,76,0"   VerticalAlignment="Top" Width="103" Grid.Column="1" Click="btnDecrypt_Click" />
+        <TextBox    Height="{Binding ElementName=mainGrd, Path=ActualHeight}" 
+                    Width="250"
+                    TextWrapping="Wrap"
+                    AcceptsReturn="True"
+                    VerticalScrollBarVisibility="Visible"
+                    HorizontalAlignment="Center" Margin="0,0,0,0"  VerticalAlignment="Stretch" 
+                    Name="txtInput" />
+        <DataGrid AutoGenerateColumns="false" Grid.Column="2"
+                  Height="{Binding ElementName=mainGrd, Path=ActualHeight}" 
+                  HorizontalAlignment="Left" Name="grd" VerticalAlignment="Top" Width="250" SelectionUnit="Cell">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Original" Binding="{Binding originalStr}"/>
+                <DataGridTextColumn Header="New" Binding="{Binding newStr}"/>
+            </DataGrid.Columns>
+
+
+        </DataGrid>
+    </Grid>
+</Window>
