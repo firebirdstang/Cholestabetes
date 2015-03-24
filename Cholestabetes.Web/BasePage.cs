@@ -8,7 +8,7 @@ using Cholestabetes.Web.Helper;
 
 namespace Cholestabetes.Web
 {
-    public class BasePage : Page
+    public class BasePage : Page 
     {
 
         protected override void OnInitComplete(EventArgs e)
