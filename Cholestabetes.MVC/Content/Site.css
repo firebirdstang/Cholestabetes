@@ -1,0 +1,506 @@
+﻿
+
+/*body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}*/
+
+/*Set padding to keep content from hitting the edges*/
+/*.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}*/
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+/*.dl-horizontal dt {
+    white-space: normal;
+}*/
+
+/* Set width on the form input elements since they're 100% wide by default */
+/*input,
+select,
+textarea {
+    max-width: 280px;
+}*/
+
+
+
+
+
+
+
+html {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url(../../images/backgroundimage.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+body {
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+
+#wrapper {
+    width: 1100px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#header {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 0px 0px 25px 25px;
+}
+
+#portal {
+    margin-bottom: 170px;
+    text-align: right;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+#body {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 35px;
+    border-radius: 25px 25px 0px 0px;
+}
+
+#left {
+    float: left;
+    width: 320px;
+}
+
+#right {
+    float: left;
+    width: 700px;
+}
+
+#content {
+    background-color: #FFF;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 20px;
+}
+
+#footer {
+    padding-top: 20px;
+    border-top-width: thin;
+    border-top-style: solid;
+    border-top-color: #666;
+    margin-top: 20px;
+}
+
+.whitesmall {
+    font-size: 9px;
+    color: #FFF;
+}
+
+.whitemedium {
+    font-size: 13px;
+    color: #FFF;
+}
+
+
+
+.classname {
+    -moz-box-shadow: inset 0px 1px 0px 0px #f5978e;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #f5978e;
+    box-shadow: inset 0px 1px 0px 0px #f5978e;
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f24537), color-stop(1, #c62d1f) );
+    background: -moz-linear-gradient( center top, #f24537 5%, #c62d1f 100% );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f24537', endColorstr='#c62d1f');
+    background-color: #f24537;
+    -webkit-border-top-left-radius: 38px;
+    -moz-border-radius-topleft: 38px;
+    border-top-left-radius: 38px;
+    -webkit-border-top-right-radius: 38px;
+    -moz-border-radius-topright: 38px;
+    border-top-right-radius: 38px;
+    -webkit-border-bottom-right-radius: 38px;
+    -moz-border-radius-bottomright: 38px;
+    border-bottom-right-radius: 38px;
+    -webkit-border-bottom-left-radius: 38px;
+    -moz-border-radius-bottomleft: 38px;
+    border-bottom-left-radius: 38px;
+    text-indent: 0px;
+    border: 1px solid #d02718;
+    display: inline-block;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: normal;
+    height: 34px;
+    line-height: 34px;
+    width: 135px;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 1px 1px 0px #810e05;
+}
+
+    .classname:hover {
+        background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24537) );
+        background: -moz-linear-gradient( center top, #c62d1f 5%, #f24537 100% );
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#f24537');
+        background-color: #c62d1f;
+    }
+
+    .classname:active {
+        position: relative;
+        top: 1px;
+    }
+
+
+.assesmentSurveyHeader {
+    background-image: url(../images/assesment_header.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100px;
+    background-position: center center;
+    padding: 0;
+    margin: 0;
+    height: 100px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+.assesmentSurveyFooter {
+    background-image: url(../images/assesment_footer.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 0;
+    margin: 0;
+    height: 100px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.assesQuestion {
+    color: #840A16;
+    font-family: 'Calibri';
+}
+
+
+.assesAnswer {
+    font-size: 12px;
+    color: Black;
+}
+
+
+.actionItem {
+    color: Black;
+    text-decoration: none;
+}
+
+
+#rightbox {
+    width: 700px;
+    border: medium solid #000;
+    background-image: url(../images/header.png);
+    padding-top: 25px;
+    background-repeat: no-repeat;
+    background-color: #F9F9F9;
+}
+
+
+.btnSubmit {
+    border: none 1px black;
+    background-color: transparent;
+    background-image: url(../images/submit.png);
+    width: 136px;
+    height: 43px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+
+
+.btnSubmit_Yellow {
+    border: none 1px black;
+    background-color: transparent;
+    background-image: url(../images/nextbutton.png);
+    width: 136px;
+    height: 43px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+
+
+.nextBtn {
+    border: none 1px black;
+    background-color: transparent;
+    background-image: url(../images/next_button.png);
+    width: 136px;
+    height: 43px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+
+
+.nextScreen {
+    border: none 1px black;
+    background-color: transparent;
+    background-image: url(../images/next_button.png);
+    width: 136px;
+    height: 43px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+
+
+.PrevScreen {
+    border: none 1px black;
+    background-color: transparent;
+    background-image: url(../images/back_button.png);
+    width: 136px;
+    height: 43px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+
+
+.registerBtn {
+    border: none 1px black;
+    background-color: transparent;
+    background-image: url(../images/register_button.png);
+    width: 136px;
+    height: 43px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+
+.confirmBtn {
+    border: none 1px black;
+    background-color: transparent;
+    background-image: url(../images/confirm_button.png);
+    width: 136px;
+    height: 43px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+
+.completeBtn {
+    border: none 1px black;
+    background-color: transparent;
+    background-image: url(../images/complete_button.png);
+    width: 136px;
+    height: 43px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+
+
+.NotMeBtn {
+    border: none 1px black;
+    background-color: transparent;
+    background-image: url(../images/not_me_button.png);
+    width: 136px;
+    height: 43px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+
+.BackBtn {
+    border: none 1px black;
+    background-color: transparent;
+    background-image: url(../images/back_button.png);
+    width: 136px;
+    height: 43px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+
+
+.CancelButton {
+    border: none 1px black;
+    background-color: transparent;
+    background-image: url(../images/Cancel_button.png);
+    width: 136px;
+    height: 43px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+
+
+
+.saveBtn {
+    border: none 1px black;
+    background-color: transparent;
+    background-image: url(../images/save_button.png);
+    width: 136px;
+    height: 43px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+
+
+.icfStampedBtn {
+    border: none 1px black;
+    background-color: transparent;
+    background-image: url(../images/stamped_approval_button.png);
+    width: 136px;
+    height: 43px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+
+.icfReferenceDocBtn {
+    border: none 1px black;
+    background-color: transparent;
+    background-image: url(../images/reference_button.png);
+    width: 136px;
+    height: 43px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+
+
+
+.icfTemplateBtn {
+    border: none 1px black;
+    background-color: transparent;
+    background-image: url(../images/icf_template_button.png);
+    width: 136px;
+    height: 43px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+
+.logInBtn {
+    border: none 1px black;
+    background-color: transparent;
+    background-image: url(../images/log_in_button.png);
+    width: 136px;
+    height: 43px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+
+
+.logInBtn2 {
+    size: 14px;
+    font-size: 14px;
+    background-image: url(../images/register_button.png);
+    width: 136px;
+    height: 43px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+
+
+.middleAlign {
+    vertical-align: middle;
+}
+
+.smallInfo {
+    font-size: 8px;
+    text-align: center;
+}
+
+
+.patientIDLabel {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    width: 130px;
+}
+
+.patientNum {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: Green;
+}
+
+
+.emailLink {
+    color: Black;
+    text-decoration: none;
+}
+
+.errorMssg {
+    font-size: 14px;
+    color: red;
+    margin: 0 auto;
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.errorDyn {
+    font-size: 11px;
+    color: red;
+    margin: 0;
+    padding: 0px;
+}
+
+.recordValues {
+    font-size: 12px;
+    color: Red;
+    font-weight: bold;
+}
+
+.nextSteps {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.clinicalRation {
+    padding: 15px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #900;
+}
+
+.note {
+    color: #c00;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.question {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+
+
+
+.sameColorLink:link,
+.sameColorLink:visited {
+    color: #394ea2;
+}
+
+.sameColorLink:hover {
+    color: #394ea2;
+}
+
+.sameColorLink:active {
+    color: #394ea2;
+}

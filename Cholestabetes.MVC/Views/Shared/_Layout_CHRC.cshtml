@@ -1,0 +1,303 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+
+
+    <div id="wrapper">
+        <div id="header">
+            <table width="97%" border="0">
+                <tr>
+                    <td>
+                        <img src="../images/logo.png" />
+
+                    </td>
+                    <td align="right" style="font-family: Arial, Helvetica, sans-serif; color: #900;
+                        font-size: 17px; font-weight: 600; text-align: right">
+                        <div class="loginDisplay">
+                            @*<asp:LoginView ID="HeadLoginView"  EnableViewState="false">
+                                    <anonymoustemplate>
+                                        <%--[ <a href="../Account/Login.aspx" id="HeadLoginStatus" >Log In</a>
+                                        ]--%>
+                                        <uc:Registration  ID="userReg" />
+                                    </anonymoustemplate>
+                                    <loggedintemplate>
+                                        Welcome <span class="bold">
+                                            <%--        <asp:LoginName ID="HeadLoginName"  />--%>
+                                            <asp:Label  ID="lblPhysicianName" />
+                                        </span>
+                                        <%--<img src="../images/Valeant_logo.png" alt="Alternate Text" />--%>
+                                        <br />
+                                        <a href="../Default.aspx"  src="../images/home_button.png" />
+                                        <a href="#"  src="../images/contact_button.png" />
+                                        <asp:LoginStatus ID="HeadLoginStatus"  LogoutAction="Redirect" LogoutText="Log Out"
+                                                         LogoutPageUrl="../" Logoutsrc="../images/logout_button.png" />
+                                    </loggedintemplate>
+                                </asp:LoginView>*@
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!--end of header-->
+        <div id="portal">
+            <imgbutton id="imgPortal" src="../images/ecrf-portal-button-dimmed.png"
+                       onclick="imgPortal_clicked" />
+        </div>
+        <!--end of portal-->
+        <div id="body">
+            <div style="width: 100%;">
+                <table width="100%" border="0" cellpadding="10">
+                    <tr>
+                        <td>
+                            <img src="../images/new_title.png" />
+                        </td>
+                        <td>
+                            <span style="font-family: Arial, Helvetica, sans-serif">
+                                <strong>February 18, 2015</strong><br />
+                                (7:00 - 8:00pm EST)
+                            </span>
+                        </td>
+                        <td>
+                            <a href="https://attendee.gotowebinar.com/register/6741175423565740801 " target="_blank">
+                                <img id="Image3" src="../images/new_register_button.png" />
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="left">
+                <table width="100%" cellspacing="0" cellpadding="7" style="font-family: Arial, Helvetica, sans-serif;
+                    font-size: 13px; border: #000; border-style: solid; border-width: medium; border-radius: 14px 14px 0px 0px">
+                    <tr>
+                        <td colspan="2" style="background-color: #000; border-radius: 10px 10px 0px 0px;
+                            text-align: center">
+                            <strong class="whitemedium">INSTRUCTIONS</strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #FFF">
+                            User Guide and Instructions
+                        </td>
+                        <td style="background-color: #FFF">
+                            <a id="HyperLink7" href="#" src="../images/icon_enter.png" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="background-color: #000; text-align: center">
+                            <span class="whitemedium"><strong>PHYSICIAN SPECIFIC REQUIREMENTS</strong></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="whitesmall" style="background-color: #900; text-align: center">
+                            <strong>YOUR ACTION ITEMS</strong>
+                        </td>
+                    </tr>
+                    @*<uc:phyrequirements id="actionItem"></uc:phyrequirements>*@
+                    Physican Requirements
+                    <tr>
+                        <td colspan="2" style="background-color: #000; text-align: center">
+                            <span class="whitemedium">
+                                <strong>
+                                    CHOLESTABETES QuERI<br />
+                                    DOCUMENTS & FORMS
+                                </strong>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #FFF">
+                            <a id="HyperLink1" href="../PDF/CHOLESTABETES QuERI_PROGRAM OVERVIEW.pdf"
+                               target="_blank" class="actionItem">CHOLESTABETES QuERI Program Overview</a>
+                        </td>
+                        <td style="background-color: #FFF">
+                            <a href="../PDF/CHOLESTABETES QuERI_PROGRAM OVERVIEW.pdf"
+                               target="_blank" class="actionItem">
+                                <img src="images/icon_download.png" />
+
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #FFF">
+                            <a href="../PDF/CHOLESTABETES Protocol_Final.pdf"
+                               target="_blank" class="actionItem" />CHOLESTABETES QuERI Protocol </a>
+                        </td>
+                        <td style="background-color: #FFF">
+                            <a href="../PDF/CHOLESTABETES Protocol_Final.pdf"
+                               target="_blank" />
+                            <img src="images/icon_download.png" />
+
+
+
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #FFF">
+                            <a href="../PDF/CERB_Approval Letter.pdf" target="_blank"
+                               class="actionItem">Central Ethics Approval Letter</a>
+                        </td>
+                        <td style="background-color: #FFF">
+                            <a href="../PDF/CERB_Approval Letter.pdf"
+                               target="_blank" class="actionItem">
+                                <img src="images/icon_download.png" />
+
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #FFF">
+                            <a id="HyperLink2" href="../Physician/ICF.aspx"
+                               target="_blank" class="actionItem">
+                                Informed Consent Form (ICF) and Instructions
+                            </a>
+                        </td>
+                        <td style="background-color: #FFF">
+                            <a id="HyperLink3" href="../Physician/ICF.aspx"
+                               target="_blank" class="actionItem">
+                                <img src="../images/icon_download.png" />
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="background-color: #000; text-align: center">
+                            <span class="whitemedium"><strong>SUPPORTING FUNCTIONS</strong></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #FFF">
+                            Payment Summary Report
+                        </td>
+                        <td style="background-color: #FFF">
+                            <a href="#">
+
+                                <img src="../images/icon_download.png" />
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="background-color: #000; text-align: center">
+                            <span class="whitemedium"><strong>GENERAL DOCUMENTS & MATERIALS</strong></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #FFF">
+                            References and Supporting Materials
+                        </td>
+                        <td style="background-color: #FFF">
+                            <a href="#">
+                                <img src="../images/icon_enter.png" />
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #FFF">
+                            Multimedia
+                        </td>
+                        <td style="background-color: #FFF">
+                            <a href="#">
+                                <img src="../images/icon_media.png" />
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!--end of left-->
+            <div id="right">
+                <div id="content">
+                    @RenderBody()
+                </div>
+                <!--end of content-->
+            </div>
+            <!--end of right-->
+            <div style="clear: both">
+            </div>
+            <div id="footer">
+                <table width="100%" border="0">
+                    <tr>
+                        <td width="20%">
+                            <img src="../images/chrc_logo.png" />
+                        </td>
+                        <td style="font-family: Arial, Helvetica, sans-serif;">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="font-family: Arial, Helvetica, sans-serif">
+                                <tr>
+                                    <td width="40%" style="font-size: 14px">
+                                        <strong>Lianne Goldin</strong>
+                                    </td>
+                                    <td width="30%" style="font-size: 14px">
+                                        <strong>Dija Chang Kit</strong>
+                                    </td>
+                                    <td width="30%" style="font-size: 14px">
+                                        <strong>Elana Dikchtein</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 10px">
+                                        Executive Director, Department of Continuing Medical Education<br />
+                                        <br />
+                                    </td>
+                                    <td style="font-size: 10px">
+                                        Project Leader<br />
+                                        <br />
+                                    </td>
+                                    <td style="font-size: 10px">
+                                        Project Coordinator<br />
+                                        <br />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 10px;">
+                                        <a href="mailto:lgoldin@CHRC.net" class="emailLink">
+                                            <img src="../images/icon1.png" valign="middle" />
+                                            lgoldin@CHRC.net
+                                        </a>
+                                    </td>
+                                    <td style="font-size: 10px;">
+                                        <a href="mailto:changkitdija@chrc.net" class="emailLink">
+                                            <img src="../images/icon1.png" valign="middle" />
+                                            changkitdija@chrc.net
+                                        </a>
+                                    </td>
+                                    <td style="font-size: 10px;">
+                                        <a href="mailto:dikchteine@chrc.net" class="emailLink">
+                                            <img src="../images/icon1.png" valign="middle" />
+                                            dikchteine@chrc.net
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 10px;">
+                                        <img src="../images/icon2.png" valign="middle" />
+                                        416.977.8010 ext 229
+                                    </td>
+                                    <td style="font-size: 10px;">
+                                        <img id="Image1" src="../images/icon2.png" valign="middle" />
+                                        416.977.8010 ext 296
+                                    </td>
+                                    <td style="font-size: 10px;">
+                                        <img id="Image2" src="../images/icon2.png" valign="middle" />
+                                        416.977.8010 ext 291
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!--end of body-->
+    </div>
+
+    @Scripts.Render("~//bundles/jquery")
+    @Scripts.Render("~//bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
