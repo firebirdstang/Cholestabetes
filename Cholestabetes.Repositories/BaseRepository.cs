@@ -13,19 +13,19 @@ namespace Cholestabetes.Repositories
 
         public BaseRepository()
         {
-            
+             
             
         }
 
-        private CholestabetesEntities ent = null;
+        private CholestabetesEntities1 ent = null;
 
-        public CholestabetesEntities Entites
+        public CholestabetesEntities1 Entites
         {
 
             get
             {
                 if (ent == null)
-                    ent = new CholestabetesEntities();
+                    ent = new CholestabetesEntities1();
 
                 return ent;
             }

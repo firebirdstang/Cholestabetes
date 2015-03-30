@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Cholestabetes.Domain;
-using System.Data.Objects;
+ 
 using Cholestabetes.Data;
 using System.Globalization;
 

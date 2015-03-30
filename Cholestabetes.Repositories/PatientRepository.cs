@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Data.Objects;
+ 
 using Cholestabetes.Domain;
 
 namespace Cholestabetes.Repositories

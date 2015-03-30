@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <connectionStrings>
+    <add name="CholestabetesEntities" connectionString="metadata=res://*/Cholestabetes.csdl|res://*/Cholestabetes.ssdl|res://*/Cholestabetes.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=CHRCWEBDEV2\CHRC_TEST;initial catalog=Cholestabetes;persist security info=True;user id=sa;password=df96e1p!;multipleactiveresultsets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
+  </connectionStrings>
+</configuration>

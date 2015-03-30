@@ -8,28 +8,8 @@ namespace Cholestabetes.Repositories
 {
     public class UserRepository : BaseRepository
     {
-        public UserRepository()
-        {
-        }
-
-
-        //public void ChangePassword(string userName, string oldPassword, string newPassword)
-        //{
-        //    Cholestabetes.Data.User user = (
-        //                                        from u in Entites.Users
-        //                                        where u.Username == userName
-        //                                        select u
-        //                                    )
-        //                                    .   SingleOrDefault();
-
-
-        //    user.Password = "aa";
-        //    Entites.Entry(user).State = System.Data.Entity.EntityState.Modified;
-        //    Entites.SaveChanges();
-
-        //}
-
-
+        
+ 
         public void ChangePassword(string userName, string oldPassword, string newPassword)
         {
 
@@ -121,18 +101,7 @@ namespace Cholestabetes.Repositories
 
         }
 
-        //using (Cholestabetes.Data.CholestabetesEntities ent = new Data.CholestabetesEntities())
-        //   {
-        //       Data.User user = ent.Users.Single(i => i.Username == "max");
-        //       if (user != null)
-        //       {
-        //           user.Email = "ax";
-
-
-        //           ent.Entry(user).State = System.Data.Entity.EntityState.Modified;
-
-        //           ent.SaveChanges();
-        //       }
+         
 
     }
 }

@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cholestabetes.EncryptionApp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cholestabetes.MVC", "Cholestabetes.MVC\Cholestabetes.MVC.csproj", "{886359ED-87E1-4B66-A084-18CCF8F1C582}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cholestabetes.Service", "Cholestabetes.Service\Cholestabetes.Service.csproj", "{D248509C-88BF-477D-A720-D6A4EA7B52DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -121,6 +123,16 @@ Global
 		{886359ED-87E1-4B66-A084-18CCF8F1C582}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{886359ED-87E1-4B66-A084-18CCF8F1C582}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{886359ED-87E1-4B66-A084-18CCF8F1C582}.Release|x86.ActiveCfg = Release|Any CPU
+		{D248509C-88BF-477D-A720-D6A4EA7B52DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D248509C-88BF-477D-A720-D6A4EA7B52DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D248509C-88BF-477D-A720-D6A4EA7B52DE}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{D248509C-88BF-477D-A720-D6A4EA7B52DE}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{D248509C-88BF-477D-A720-D6A4EA7B52DE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D248509C-88BF-477D-A720-D6A4EA7B52DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D248509C-88BF-477D-A720-D6A4EA7B52DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D248509C-88BF-477D-A720-D6A4EA7B52DE}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{D248509C-88BF-477D-A720-D6A4EA7B52DE}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{D248509C-88BF-477D-A720-D6A4EA7B52DE}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="69283b0752b449d5af82828ab81ed557" Name="Diagram1">
+        <EntityTypeShape EntityType="CholestabetesModel.Answer" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CholestabetesModel.ELMAH_Error" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CholestabetesModel.InviteesMaster" Width="1.5" PointX="10.25" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CholestabetesModel.Patient" Width="1.5" PointX="5.25" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CholestabetesModel.PatientAnswer" Width="1.5" PointX="5.25" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CholestabetesModel.PatientQuestion" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CholestabetesModel.PatientQuestionAnswer" Width="1.5" PointX="7.5" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CholestabetesModel.PatientSummary" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CholestabetesModel.PatientVisit" Width="1.5" PointX="10.5" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="CholestabetesModel.PayeeInfo" Width="1.5" PointX="5.25" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CholestabetesModel.Province" Width="1.5" PointX="8" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CholestabetesModel.Question" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CholestabetesModel.RegistrationCode" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CholestabetesModel.RegistrationStatu" Width="1.5" PointX="8" PointY="20" IsExpanded="true" />
+        <EntityTypeShape EntityType="CholestabetesModel.Role" Width="1.5" PointX="0.75" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CholestabetesModel.Survey" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CholestabetesModel.User" Width="1.5" PointX="3" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="CholestabetesModel.UserAnswer" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="CholestabetesModel.UserRegistration" Width="1.5" PointX="5.25" PointY="24.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CholestabetesModel.UserSurvey" Width="1.5" PointX="7.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CholestabetesModel.Visit" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CholestabetesModel.VisitReminder" Width="1.5" PointX="7.5" PointY="13.5" IsExpanded="true" />
+        <AssociationConnector Association="CholestabetesModel.FK_UserAnswer_Answer" ManuallyRouted="false" />
+        <AssociationConnector Association="CholestabetesModel.FK_InviteesMaster_Provinces" ManuallyRouted="false" />
+        <AssociationConnector Association="CholestabetesModel.FK_InviteesMaster_RegistrationStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="CholestabetesModel.FK_InviteesMaster_User" ManuallyRouted="false" />
+        <AssociationConnector Association="CholestabetesModel.FK_Patient_User" ManuallyRouted="false" />
+        <AssociationConnector Association="CholestabetesModel.FK_PatientQuestionAnswer_Patient" ManuallyRouted="false" />
+        <AssociationConnector Association="CholestabetesModel.FK_PatientVisit_Patient" ManuallyRouted="false" />
+        <AssociationConnector Association="CholestabetesModel.FK_VisitReminder_Patient" ManuallyRouted="false" />
+        <AssociationConnector Association="CholestabetesModel.FK_PatientAnswer_PatientQuestion" ManuallyRouted="false" />
+        <AssociationConnector Association="CholestabetesModel.FK_PatientQuestionAnswer_PatientAnswer" ManuallyRouted="false" />
+        <AssociationConnector Association="CholestabetesModel.FK_PatientQuestion_Visit" ManuallyRouted="false" />
+        <AssociationConnector Association="CholestabetesModel.FK_PatientQuestionAnswer_PatientQuestion" ManuallyRouted="false" />
+        <AssociationConnector Association="CholestabetesModel.FK_PatientVisit_Visit" ManuallyRouted="false" />
+        <AssociationConnector Association="CholestabetesModel.FK_PayeeInfo_User" ManuallyRouted="false" />
+        <AssociationConnector Association="CholestabetesModel.FK_UserAnswer_Question" ManuallyRouted="false" />
+        <AssociationConnector Association="CholestabetesModel.FK_UserRegistration_User" ManuallyRouted="false" />
+        <AssociationConnector Association="CholestabetesModel.FK_VisitReminder_User" ManuallyRouted="false" />
+        <AssociationConnector Association="CholestabetesModel.FK_VisitReminder_Visit" ManuallyRouted="false" />
+        <AssociationConnector Association="CholestabetesModel.UserRole" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
