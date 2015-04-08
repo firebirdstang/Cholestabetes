@@ -421,6 +421,9 @@
                                             <asp:TextBox runat="server" ID="txtMostRecentLabDate" size="20" />
                                             <asp:ImageButton ImageUrl="~/images/calendar.png" runat="server" ID="imgBtn" OnClientClick="return false;"
                                                 Style="vertical-align: middle;" />
+                                            
+               
+
                                         </td>
                                         <td style="width: 50px;" align="left">
                                         </td>

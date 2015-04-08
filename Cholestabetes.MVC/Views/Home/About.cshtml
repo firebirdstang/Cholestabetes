@@ -1,7 +1,49 @@
-﻿@{
-    ViewBag.Title = "About";
-}
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+﻿
+@section scripts
+{
+    <script type="text/javascript">
 
-<p>Use this area to provide additional information.</p>
+        
+
+            $(document).ready(function () {
+
+
+                //$('#btn').datepicker({
+
+                //    altField: $('#txtDate'),
+
+                //    numberOfMonths: 1,
+                //    changeMonth: true,
+                //    changeYear: true,
+
+                //    yearRange: "2000:2016"
+
+                //});
+
+                $('#txtDate').datepicker({
+
+                    altField: $('#txtDate'),
+
+                    numberOfMonths: 1,
+                    changeMonth: true,
+                    changeYear: true,
+
+                    yearRange: "2000:2016"
+
+                });
+
+            });
+
+
+            function pageLoad() { }
+
+
+    </script>
+}
+
+
+
+<input type="text" id="txtDate" class="cc" />
+<button id="btn"></button>
+
+

@@ -136,7 +136,7 @@
           white-space:nowrap;   
         }
     </style>
-    </style>
+    
     <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
     </asp:ToolkitScriptManager>
     <div id="rightbox">

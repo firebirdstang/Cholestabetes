@@ -7,7 +7,7 @@ using System.Web.Http;
 
 namespace Cholestabetes.Service.Controllers
 {
-    [Authorize]
+    
     public class ValuesController : ApiController
     {
         // GET api/values

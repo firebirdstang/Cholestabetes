@@ -10,6 +10,7 @@ using Cholestabetes.Domain;
 
 namespace Cholestabetes.Service.Controllers
 {
+    
     public class PatientController : ApiController
     {
 
@@ -43,7 +44,7 @@ namespace Cholestabetes.Service.Controllers
 
             return patRepos.GetPatientName(patientID);
         }
-
+        [HttpGet]
         public List<PatientVisit> GetPatientsByPhysicians(int physicianID)
         {
             return patRepos.GetPatientsByPhysicians(physicianID);

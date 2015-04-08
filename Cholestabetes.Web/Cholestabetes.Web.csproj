@@ -740,6 +740,8 @@
     <None Include="PDF\Invitation Letter_French_Form Fields.pdf" />
     <None Include="PDF\Invitation Letter_French_Form Fields_Sept 30.pdf" />
     <None Include="PDF\Welcome Letter.docx" />
+    <None Include="Properties\PublishProfiles\Profile1.pubxml" />
+    <None Include="Properties\PublishProfiles\Test_UAT.pubxml" />
     <None Include="Scripts\jquery-2.1.1.min.map" />
   </ItemGroup>
   <ItemGroup>
@@ -780,7 +782,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>50791</DevelopmentServerPort>
+          <DevelopmentServerPort>47783</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>
