@@ -10,12 +10,12 @@ using Cholestabetes.Domain;
 
 namespace Cholestabetes.Service.Controllers
 {
-    
+    [RoutePrefix("Patient")]
     public class PatientController : ApiController
     {
 
         PatientRepository patRepos = new PatientRepository();
-        
+
         public void AddPatient(int physicianID)
         {
             patRepos.AddPatient(physicianID);
@@ -39,12 +39,13 @@ namespace Cholestabetes.Service.Controllers
             return patRepos.GetPatientAge(patientID);
         }
 
+        [Route("Name")]
         public string GetPatientName(int patientID)
         {
 
             return patRepos.GetPatientName(patientID);
         }
-        [HttpGet]
+
         public List<PatientVisit> GetPatientsByPhysicians(int physicianID)
         {
             return patRepos.GetPatientsByPhysicians(physicianID);

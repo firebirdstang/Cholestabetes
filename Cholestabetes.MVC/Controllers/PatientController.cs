@@ -27,9 +27,11 @@ namespace Cholestabetes.MVC.Controllers
 
                 client.BaseAddress = new Uri(Helper.SERVICE_URL);
 
-                //string method = string.Format("Patient/GetPatientsByPhysicians?physicianID={0}", 202);
-
-                string method = "values";
+                string method = string.Format("Patient/Name?patientID={0}", 202);
+                
+                //string method = string.Format("Patient/PatientsByPhysicians?physicianID={0}", 202);
+                
+                //string method = "values";
 
                 HttpResponseMessage response = client.GetAsync(Helper.GetServiceURL(method)).Result;
 

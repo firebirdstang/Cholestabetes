@@ -40,51 +40,47 @@
 
     </script>
     <style>
-        .error
-        {
+        .error {
             color: Red;
             font-size: 11px;
             padding-top: 5px;
             padding-bottom: 5px;
         }
-        .pointerHover
-        {
+
+        .pointerHover {
             cursor: pointer;
         }
-        .patiendIDCol
-        {
+
+        .patiendIDCol {
             font-size: 25px;
-           
             text-decoration: none;
-        }    <style>
-        .InfoFooter
-        {
+        }
+
+        <style > .InfoFooter {
             font-size: 11px;
         }
-        .Infoheading
-        {
+
+        .Infoheading {
             font-size: 15px;
         }
-        .InfoBody
-        {
+
+        .InfoBody {
             color: White;
             font-family: Candara;
-            background-color:   black; 
+            background-color: black;
             padding: 5px;
             padding-left: 8px;
             padding-right: 8px;
             width: 300px;
         }
-        
-        .InfoLst
-        {
+
+        .InfoLst {
             font-size: 14px;
         }
-        
-        
-        
-        .cancel
-        {
+
+
+
+        .cancel {
             -moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
             -webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
             box-shadow: inset 0px 1px 0px 0px #ffffff;
@@ -119,24 +115,24 @@
             text-align: center;
             text-shadow: 1px 1px 0px #ffffff;
         }
-        .cancel:hover
-        {
-            background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
-            background: -moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
-            background-color: #dfdfdf;
-        }
-        .cancel:active
-        {
-            position: relative;
-            top: 1px;
-        }
-        .noWrap
-        {
-          white-space:nowrap;   
+
+            .cancel:hover {
+                background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
+                background: -moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
+                background-color: #dfdfdf;
+            }
+
+            .cancel:active {
+                position: relative;
+                top: 1px;
+            }
+
+        .noWrap {
+            white-space: nowrap;
         }
     </style>
-    
+
     <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
     </asp:ToolkitScriptManager>
     <div id="rightbox">
@@ -144,15 +140,16 @@
             <ContentTemplate>
                 <table width="100%" cellspacing="0" border="0">
                     <tr>
-                        <td align="center" style="font-size: 25px; font-weight: bold; color: #900; font-family: Arial, Helvetica, sans-serif">
-                            eCRF Portal
+                        <td align="center" style="font-size: 25px; font-weight: bold; color: #900; font-family: Arial, Helvetica, sans-serif">eCRF Portal
+                        
                         </td>
                     </tr>
                 </table>
                 <br />
                 <div style="padding-left: 10px">
                     <a href="../Default.aspx">
-                        <img src="../images/home_flag.png" /></a></div>
+                        <img src="../images/home_flag.png" /></a>
+                </div>
                 <div style="text-align: center; margin: 0 auto; width: 100%;">
                     <div class="error">
                         <asp:ImageButton ImageUrl="~/images/add_patient_button.png" runat="server" ID="imgAdd"
@@ -162,10 +159,10 @@
                         <asp:Label runat="server" ID="lblMssg" />
                     </div>
                 </div>
-                <div style="text-align: center; margin: 0 auto; width: 100%;padding-left:5px; padding-right:5px;">
-                    <dx:ASPxGridView ID="gvPatients" runat="server" AutoGenerateColumns="False" KeyFieldName="PatientID"
-                        OnHtmlRowCreated="gvPatients_HtmlRowCreated" OnHtmlDataCellPrepared="gvPatients_HtmlDataCellPrepared"
-                        OnHtmlCommandCellPrepared="gvPatients_HtmlCommandCellPrepared" Width="95%">
+                <div style="text-align: center; margin: 0 auto; width: 100%; padding-left: 5px; padding-right: 5px;">
+                    <dx:aspxgridview id="gvPatients" runat="server" autogeneratecolumns="False" keyfieldname="PatientID"
+                        onhtmlrowcreated="gvPatients_HtmlRowCreated" onhtmldatacellprepared="gvPatients_HtmlDataCellPrepared"
+                        onhtmlcommandcellprepared="gvPatients_HtmlCommandCellPrepared" width="95%">
                         <Settings ShowFilterRow="True" />
                         <Columns>
                             <dx:GridViewDataHyperLinkColumn FieldName="UniqueID" Width="70px" Caption="Patient<br>Info"
@@ -360,7 +357,7 @@
                             </dx:GridViewDataTextColumn>
                         </Columns>
                         <Settings ShowFilterRow="True" />
-                    </dx:ASPxGridView>
+                    </dx:aspxgridview>
                     <br />
                     <div>
                         <asp:Label runat="server" ID="lblResult" ForeColor="Red" />
