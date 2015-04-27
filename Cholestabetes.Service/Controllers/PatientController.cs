@@ -16,11 +16,13 @@ namespace Cholestabetes.Service.Controllers
 
         PatientRepository patRepos = new PatientRepository();
 
+        [Route("AddPatient")]
         public void AddPatient(int physicianID)
         {
             patRepos.AddPatient(physicianID);
         }
 
+        [Route("SaveName")]
         public void SaveName(int patientID, string firstName, string lastName, string telephone)
         {
 
@@ -28,12 +30,14 @@ namespace Cholestabetes.Service.Controllers
 
         }
 
+        [Route("ShowPatientAdherenceBox")]
         public bool ShowPatientAdherenceBox(int patientID)
         {
 
             return patRepos.ShowPatientAdherenceBox(patientID);
         }
 
+        [Route("Age")]
         public string GetPatientAge(int patientID)
         {
             return patRepos.GetPatientAge(patientID);
@@ -46,11 +50,12 @@ namespace Cholestabetes.Service.Controllers
             return patRepos.GetPatientName(patientID);
         }
 
+        [Route("PatientsByPhysicians")]
         public List<PatientVisit> GetPatientsByPhysicians(int physicianID)
         {
             return patRepos.GetPatientsByPhysicians(physicianID);
         }
 
-          
+
     }
 }
