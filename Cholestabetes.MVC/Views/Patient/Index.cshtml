@@ -5,234 +5,70 @@
 }
 
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.AutoNumber)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PatientName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Telephone)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PatientID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PhysicianID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FirstName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LastName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.VisitStatus1)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.VisitDateTime1)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Visit1ScreenID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.VisitStatus2)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.VisitDateTime2)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Visit2ScreenID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.VisitStatus3)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.VisitDateTime3)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Visit3ScreenID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Visit1StartDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Visit1EndDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Visit2StartDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Visit2EndDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Visit3StartDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Visit3EndDate)
-        </th>
-        <th></th>
-    </tr>
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.AutoNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PatientName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Telephone)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PatientID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PhysicianID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FirstName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LastName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.VisitStatus1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.VisitDateTime1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Visit1ScreenID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.VisitStatus2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.VisitDateTime2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Visit2ScreenID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.VisitStatus3)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.VisitDateTime3)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Visit3ScreenID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Visit1StartDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Visit1EndDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Visit2StartDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Visit2EndDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Visit3StartDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Visit3EndDate)
-            </td>
 
-        </tr>
+<style type="text/css">
+    .maingrd {
+        font-family: Tahoma;
+        font-size: 11px;
+        width: 100%;
+        border-collapse: collapse;
+        empty-cells: show;
+        padding: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 
-</table>
+        .maingrd tr td {
+            border: 1px Solid #9F9F9F;
+        }
+
+        .maingrd th {
+            border-color: rgb(102, 102, 102);
+            text-align: center;
+            color: white;
+            border-top-width: 0px;
+            border-right-width: 0px;
+            border-left-width: 0px;
+            background-color: rgb(102, 102, 102);
+        }
+</style>
 
 
-
-
-
-<table style="width: 100%; border-collapse: collapse; empty-cells: show;" cellspacing="0" cellpadding="0">
-    <tbody>
+<table class="maingrd" cellspacing="0" cellpadding="0">
+    <thead>
         <tr>
-            <td style="border-color: rgb(102, 102, 102); width: 70px; text-align: center; color: white; border-top-width: 0px; border-left-width: 0px; background-color: rgb(102, 102, 102);" onmousedown="aspxGVHeaderMouseDown('MainContent_gvPatients', this, event);">
-                <table style="width: 100%; border-collapse: collapse;" cellspacing="0" cellpadding="0">
-                    <tbody>
-                        <tr>
-                            <td style="text-align: center; color: white;">Patient<br>Info</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-            <td style="border-color: gainsboro; text-align: center; color: white; border-top-width: 0px; border-left-width: 0px; background-color: rgb(102, 102, 102);" onmousedown="aspxGVHeaderMouseDown('MainContent_gvPatients', this, event);">
-                <table style="width: 100%; border-collapse: collapse;" cellspacing="0" cellpadding="0">
-                    <tbody>
-                        <tr>
-                            <td style="text-align: center; color: white;">Visit 1 e-CRF</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-            <td style="border-color: rgb(102, 102, 102); text-align: center; color: white; border-top-width: 0px; border-left-width: 0px; background-color: rgb(102, 102, 102);" onmousedown="aspxGVHeaderMouseDown('MainContent_gvPatients', this, event);">
-                <table style="width: 100%; border-collapse: collapse;" cellspacing="0" cellpadding="0">
-                    <tbody>
-                        <tr>
-                            <td style="text-align: center; color: white;">Status</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-            <td style="border-color: gainsboro; text-align: center; color: white; border-top-width: 0px; border-left-width: 0px; background-color: rgb(102, 102, 102);" onmousedown="aspxGVHeaderMouseDown('MainContent_gvPatients', this, event);">
-                <table style="width: 100%; border-collapse: collapse;" cellspacing="0" cellpadding="0">
-                    <tbody>
-                        <tr>
-                            <td style="text-align: center; color: white;">Visit 2 e-CRF</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-            <td style="border-color: rgb(102, 102, 102); text-align: center; color: white; border-top-width: 0px; border-left-width: 0px; background-color: rgb(102, 102, 102);" onmousedown="aspxGVHeaderMouseDown('MainContent_gvPatients', this, event);">
-                <table style="width: 100%; border-collapse: collapse;" cellspacing="0" cellpadding="0">
-                    <tbody>
-                        <tr>
-                            <td style="text-align: center; color: white;">Status</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-            <td style="border-color: gainsboro; text-align: center; color: white; border-top-width: 0px; border-left-width: 0px; background-color: rgb(102, 102, 102);" onmousedown="aspxGVHeaderMouseDown('MainContent_gvPatients', this, event);">
-                <table style="width: 100%; border-collapse: collapse;" cellspacing="0" cellpadding="0">
-                    <tbody>
-                        <tr>
-                            <td style="text-align: center; color: white;">Visit 3 e-CRF</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-            <td style="border-color: rgb(102, 102, 102); text-align: center; color: white; border-top-width: 0px; border-right-width: 0px; border-left-width: 0px; background-color: rgb(102, 102, 102);" onmousedown="aspxGVHeaderMouseDown('MainContent_gvPatients', this, event);">
-                <table style="width: 100%; border-collapse: collapse;" cellspacing="0" cellpadding="0">
-                    <tbody>
-                        <tr>
-                            <td style="text-align: center; color: white;">Status</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
+            <th>
+                Patient<br>Info
+            </th>
+            <th>
+                Visit 1 e-CRF
+            </th>
+            <th>
+                Status
+            </th>
+            <th>
+                Visit 2 e-CRF
+            </th>
+            <th>
+                Status
+            </th>
+            <th>
+                Visit 3 e-CRF
+            </th>
+            <th>
+                Status
+            </th>
         </tr>
-
-
-
+    </thead>
+    <tbody>
         @foreach (var item in Model)
         {
 
-
             <tr>
-                <td align="center" class="dxgv" id="MainContent_gvPatients_tccell0_0" style="vertical-align: middle;">
+                <td align="center" class="dxgv" style="vertical-align: middle;">
 
-                    <div class="InfoBody" id="MainContent_gvPatients_cell0_0_pnlPopup_0" style="left: 774px; top: 827px; display: none; visibility: hidden; position: absolute; z-index: 1000;">
+                    <div class="InfoBody" style="left: 774px; top: 827px; display: none; visibility: hidden; position: absolute; z-index: 1000;">
 
                         <table width="100%" border="0" cellspacing="0" cellpadding="5">
                             <tbody>
@@ -241,7 +77,7 @@
                                         Full Name
                                     </td>
                                     <td>
-                                        <span id="MainContent_gvPatients_cell0_0_lblName_0">Maqsood Khan</span>
+                                        <span>Maqsood Khan</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -249,7 +85,7 @@
                                         Phone
                                     </td>
                                     <td>
-                                        <span id="MainContent_gvPatients_cell0_0_Label3_0">111-111-1111</span>
+                                        <span>111-111-1111</span>
                                     </td>
                                 </tr>
 
@@ -257,61 +93,72 @@
                         </table>
 
                     </div>
-                    <a class="add_open btn btn-success fancybox1 patiendIDCol" id="MainContent_gvPatients_cell0_0_hlPopup_0" href="PatientInfo.aspx?PATIENTID=96" target="_blank">01</a>
+                    <a href="PatientInfo.aspx?PATIENTID=96" target="_blank">@item.AutoNumber</a>
 
                 </td>
-                <td align="center" class="dxgv" id="MainContent_gvPatients_tccell0_5">
+                <td align="center" class="dxgv">
                     <img src='@(item.VisitStatus1 == 1 ? "../images/grayfoldericon.png" : "../images/greenfoldericon.png")' />
 
                 </td>
-                <td align="center" class="dxgv" id="MainContent_gvPatients_tccell0_6">
-                    <span id="MainContent_gvPatients_cell0_6_lblStatus1_0">Completed</span>
+                <td align="center" class="dxgv">
+                    <span>@(item.VisitStatus1 == 0 ? "Incomplete" : item.VisitStatus1 == 1 ? "Completed" : "") </span>
                     <br>
                     <br>
-                    <span id="MainContent_gvPatients_cell0_6_lblCompleteDate_0">13-Feb-2015</span>
+
+                    <span>@(item.VisitDateTime1.HasValue ? item.VisitDateTime1.Value.ToString("dd/MMM/yyyy") : "")</span>
                     <br>
                     <br>
-                    <span id="MainContent_gvPatients_cell0_6_Label4_0"></span>
+                    <span></span>
                     <div class="noWrap" style="color: green; padding-top: 5px;">
-                        <span id="MainContent_gvPatients_cell0_6_Label1_0"></span>
-                        <span id="MainContent_gvPatients_cell0_6_Label2_0"></span>
+                        <span></span>
+                        <span></span>
                     </div>
                 </td>
-                <td align="center" class="dxgv" id="MainContent_gvPatients_tccell0_8">
-                    <input name="ctl00$MainContent$gvPatients$cell0_8$ctl00$imgViewVisit2" class="pointerHover" id="MainContent_gvPatients_cell0_8_imgViewVisit2_0" type="image" src="../images/greenfoldericon.png" screenid="1" status="0" patientid="96" patientnum="01">
+                <td align="center" class="dxgv">
+                    @*<input name="ctl00$MainContent$gvPatients$cell0_8$ctl00$imgViewVisit2" class="pointerHover" id="MainContent_gvPatients_cell0_8_imgViewVisit2_0" type="image" src="../images/greenfoldericon.png" screenid="1" status="0" patientid="96" patientnum="01">*@
+
+                    <img src='@(item.VisitStatus2 == 1 ? "../images/grayfoldericon.png" : item.VisitStatus2 == 0 ? "../images/greenfoldericon.png" : "../images/closebutton.gif" )' />
+
                 </td>
-                <td align="center" class="dxgv" id="MainContent_gvPatients_tccell0_9">
-                    <span id="MainContent_gvPatients_cell0_9_lblStatus2_0">Incomplete</span>
+                <td align="center" class="dxgv">
+                    <span>@(item.VisitStatus2 == 0 ? "Incomplete" : item.VisitStatus2 == 1 ? "Completed" : "") </span>
                     <br>
                     <br>
-                    <span id="MainContent_gvPatients_cell0_9_lblCompleteDate_0"></span>
+                    <span></span>
                     <br>
                     <br>
-                    <span id="MainContent_gvPatients_cell0_9_Label4_0">Accessible between</span>
+                    <span>Accessible between</span>
                     <div class="noWrap" style="color: green; padding-top: 5px;">
-                        <span id="MainContent_gvPatients_cell0_9_Label1_0">09-Apr-2015 -- </span>
-                        <span id="MainContent_gvPatients_cell0_9_Label2_0">02-Jul-2015</span>
+
+
+                        <span>@(item.Visit2StartDate.HasValue ? item.Visit2StartDate.Value.ToString("dd/MMM/yyyy") : "") -- </span>
+                        <span>@(item.Visit2EndDate.HasValue ? item.Visit2EndDate.Value.ToString("dd/MMM/yyyy") : "")</span>
                     </div>
                 </td>
-                <td align="center" class="dxgv" id="MainContent_gvPatients_tccell0_11">
-                    <input name="ctl00$MainContent$gvPatients$cell0_11$ctl00$imgViewVisit3" class="pointerHover" id="MainContent_gvPatients_cell0_11_imgViewVisit3_0" onclick="return false;" type="image" src="../images/closebutton.gif" screenid="1" status="2" patientid="96" patientnum="01">
+                <td align="center" class="dxgv">
+                    @*<input name="ctl00$MainContent$gvPatients$cell0_11$ctl00$imgViewVisit3" class="pointerHover" id="MainContent_gvPatients_cell0_11_imgViewVisit3_0" onclick="return false;" type="image" src="../images/closebutton.gif" screenid="1" status="2" patientid="96" patientnum="01">*@
+                    <img src='@(item.VisitStatus3 == 1 ? "../images/grayfoldericon.png" : item.VisitStatus3 == 0 ? "../images/greenfoldericon.png" : "../images/closebutton.gif")' />
                 </td>
-                <td align="center" class="dxgv" id="MainContent_gvPatients_tccell0_12" style="border-right-width: 0px;">
-                    <span id="MainContent_gvPatients_cell0_12_lblStatus3_0"></span>
+                <td align="center" class="dxgv" style="border-right-width: 0px;">
+                    <span>@(item.VisitStatus3 == 0 ? "Incomplete" : item.VisitStatus3 == 1 ? "Completed" : "") </span>
                     <br>
                     <br>
-                    <span id="MainContent_gvPatients_cell0_12_lblCompleteDate_0"></span>
+                    <span></span>
                     <br>
                     <br>
-
+                    <span>@(item.Visit3StartDate.HasValue ? "Accessible between" : "")</span>
                     <div class="noWrap" style="color: green; padding-top: 5px;">
-
-
+                        <span>@(item.Visit3StartDate.HasValue ? item.Visit3StartDate.Value.ToString("dd/MMM/yyyy") : "") -- </span>
+                        <span>
+                            @(item.Visit3EndDate.HasValue ? item.Visit3EndDate.Value.ToString("dd/MMM/yyyy") : "")
+                        </span>
                     </div>
                 </td>
             </tr>
-
         }
 
+        <tr>
+            <td colspan="7">&nbsp;</td>
+        </tr>
     </tbody>
 </table>

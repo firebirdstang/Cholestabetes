@@ -9,11 +9,12 @@ using Cholestabetes.Repositories;
 
 namespace Cholestabetes.Service.Controllers
 {
+    [RoutePrefix("Payee")]
     public class PayeeController : ApiController
     {
-
         PayeeRepository payeeRepos = new Repositories.PayeeRepository();
 
+        [Route("AddPayee")]
         public void AddPayee(Domain.Payee payee)
         {
 
@@ -21,6 +22,7 @@ namespace Cholestabetes.Service.Controllers
 
         }
 
+        [Route("Payee")]
         public Domain.Payee GetPayee(int userID)
         {
             return payeeRepos.GetPayee(userID);

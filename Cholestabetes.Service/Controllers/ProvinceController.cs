@@ -9,16 +9,18 @@ using Cholestabetes.Repositories;
 
 namespace Cholestabetes.Service.Controllers
 {
+    [RoutePrefix("Province")]
     public class ProvinceController : ApiController
     {
 
         ProvinceRepository provRepos = new Repositories.ProvinceRepository();
-        
+
+        [Route("Provinces")]
         public List<Cholestabetes.Domain.Province> GetProvinces()
         {
             return provRepos.GetProvinces();
-            
+
         }
-    
+
     }
 }
