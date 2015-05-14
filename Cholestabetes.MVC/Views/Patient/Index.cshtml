@@ -1,11 +1,6 @@
-﻿@model IEnumerable<Cholestabetes.Domain.PatientVisit>
-
-@{
+﻿@{
     ViewBag.Title = "Index";
 }
-
-
-
 
 <style type="text/css">
     .maingrd {
@@ -35,6 +30,59 @@
 </style>
 
 
+@section scripts {
+
+   
+
+    <script type="text/javascript">
+
+        var request = $.ajax({
+
+            type: 'Get',
+            url: '/Patient/GetPatientData',
+            traditional: true,
+            data: { physicianID: 202 },
+            async: true,
+            dataType: "json"
+        });
+
+
+        request.done(function (mainData) {
+
+            //use id insteaf of strings
+
+            if (mainData.Error) {
+                toast(mainData.Error);
+            }
+            else {
+
+
+                for (var i = 0; i < mainData.List.length ; i++) {
+
+                 //   alert(mainData.List[i]);
+
+                }
+
+            }
+
+        });
+
+        request.always(function () {
+
+
+        });
+
+        request.fail(function (jqXHR, textStatus) {
+
+            alert("Error ");
+
+        });
+
+    </script>
+
+}
+
+
 <table class="maingrd" cellspacing="0" cellpadding="0">
     <thead>
         <tr>
@@ -61,6 +109,11 @@
             </th>
         </tr>
     </thead>
+
+</table>
+
+<script type="text/x-jquery-tmpl" id="titleTempl">
+
     <tbody>
         @foreach (var item in Model)
         {
@@ -70,27 +123,27 @@
 
                     <div class="InfoBody" style="left: 774px; top: 827px; display: none; visibility: hidden; position: absolute; z-index: 1000;">
 
-                        <table width="100%" border="0" cellspacing="0" cellpadding="5">
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        Full Name
-                                    </td>
-                                    <td>
-                                        <span>Maqsood Khan</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Phone
-                                    </td>
-                                    <td>
-                                        <span>111-111-1111</span>
-                                    </td>
-                                </tr>
+                        @*<table width="100%" border="0" cellspacing="0" cellpadding="5">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            Full Name
+                                        </td>
+                                        <td>
+                                            <span>Maqsood Khan</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Phone
+                                        </td>
+                                        <td>
+                                            <span>111-111-1111</span>
+                                        </td>
+                                    </tr>
 
-                            </tbody>
-                        </table>
+                                </tbody>
+                            </table>*@
 
                     </div>
                     <a href="PatientInfo.aspx?PATIENTID=96" target="_blank">@item.AutoNumber</a>
@@ -161,4 +214,5 @@
             <td colspan="7">&nbsp;</td>
         </tr>
     </tbody>
-</table>
+
+</script>

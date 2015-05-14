@@ -10,7 +10,7 @@ namespace Cholestabetes.MVC.Code
     {
         public static string SERVICE_URL
         {
-            get { return "http://localhost:8088/"; }
+            get { return "http://localhost/ser/"; }
         }
 
         public static string API_NAME

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
+using System.Web.Helpers;
 using System.Web.Mvc;
 
 namespace Cholestabetes.MVC.Controllers
@@ -15,17 +16,17 @@ namespace Cholestabetes.MVC.Controllers
         
         public ActionResult Index()
         {
+             
+            return View();
+        }
+
+        public ActionResult Index2()
+        {
+
             List<PatientVisit> result = new List<PatientVisit>();
 
             using (var client = new HttpClient())
             {
-                //var patientURL = Url.RouteUrl("Service", new { controller = "Patient", action = "Name", patientID = 22 });
-                //HttpResponseMessage response = client.GetAsync(patientURL).Result;
-                //if (response.IsSuccessStatusCode)
-                //{
-                //    res = response.Content.ReadAsAsync<string>().Result;
-                //}
-
 
                 client.BaseAddress = new Uri(Cholestabetes.MVC.Code.Helper.SERVICE_URL);
                 string method = string.Format("Patient/PatientsByPhysicians?physicianID={0}", 202);
@@ -35,9 +36,28 @@ namespace Cholestabetes.MVC.Controllers
                     result = response.Content.ReadAsAsync<List<PatientVisit>>().Result;
                 }
             }
-
             return View(result);
         }
+
+        
+        public JsonResult GetPatientData(int physicianID)
+        {
+            List<PatientVisit> result = new List<PatientVisit>();
+
+            using (var client = new HttpClient())
+            {
+
+                client.BaseAddress = new Uri(Cholestabetes.MVC.Code.Helper.SERVICE_URL);
+                string method = string.Format("Patient/PatientsByPhysicians?physicianID={0}", 202);
+                HttpResponseMessage response = client.GetAsync(Cholestabetes.MVC.Code.Helper.GetServiceURL(method)).Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    result = response.Content.ReadAsAsync<List<PatientVisit>>().Result;
+                }
+            }
+            return Json(new { List = result }, JsonRequestBehavior.AllowGet);
+        }
+  
   
     }
 }
