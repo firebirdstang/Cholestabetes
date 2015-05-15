@@ -39,7 +39,6 @@ namespace Cholestabetes.MVC.Controllers
             return View(result);
         }
 
-        
         public JsonResult GetPatientData(int physicianID)
         {
             List<PatientVisit> result = new List<PatientVisit>();

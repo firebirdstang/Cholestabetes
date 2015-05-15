@@ -15,7 +15,7 @@
     }
 
         .maingrd tr td {
-            border: 1px Solid #9F9F9F;
+            border: 0px Solid #9F9F9F;
         }
 
         .maingrd th {
@@ -30,9 +30,11 @@
 </style>
 
 
-@section scripts {
+ 
 
-   
+
+@section scripts
+{
 
     <script type="text/javascript">
 
@@ -49,7 +51,7 @@
 
         request.done(function (mainData) {
 
-            //use id insteaf of strings
+             
 
             if (mainData.Error) {
                 toast(mainData.Error);
@@ -57,12 +59,29 @@
             else {
 
 
+                var counter = 0;
                 for (var i = 0; i < mainData.List.length ; i++) {
 
-                 //   alert(mainData.List[i]);
+                    if (mainData.List[i] != '') {
 
+                        var row = {
+
+                            AutoNumber: ++counter,
+                            VisitStatus1: mainData.List[i].VisitStatus1,
+                            VisitDateTime1: mainData.List[i].VisitDateTime1,
+                            VisitStatus2: mainData.List[i].VisitStatus2,
+                            Visit2StartDate: mainData.List[i].Visit2StartDate,
+                            Visit2EndDate: mainData.List[i].Visit2EndDate,
+                            VisitStatus3: mainData.List[i].VisitStatus3,
+                            Visit3StartDate: mainData.List[i].Visit3StartDate,
+                            Visit3EndDate: mainData.List[i].Visit3EndDate
+                        };
+
+                        var newItem = $("#rowTempl").tmpl(row);
+                        $("#tblBody").append(newItem);
+
+                    }
                 }
-
             }
 
         });
@@ -79,140 +98,101 @@
         });
 
     </script>
-
 }
 
+<div style="width:100%;">
 
-<table class="maingrd" cellspacing="0" cellpadding="0">
-    <thead>
-        <tr>
-            <th>
-                Patient<br>Info
-            </th>
-            <th>
-                Visit 1 e-CRF
-            </th>
-            <th>
-                Status
-            </th>
-            <th>
-                Visit 2 e-CRF
-            </th>
-            <th>
-                Status
-            </th>
-            <th>
-                Visit 3 e-CRF
-            </th>
-            <th>
-                Status
-            </th>
-        </tr>
-    </thead>
-
-</table>
-
-<script type="text/x-jquery-tmpl" id="titleTempl">
-
-    <tbody>
-        @foreach (var item in Model)
-        {
-
+    <table class="maingrd" cellspacing="0" cellpadding="0" id="tbl">
+        <thead>
             <tr>
-                <td align="center" class="dxgv" style="vertical-align: middle;">
-
-                    <div class="InfoBody" style="left: 774px; top: 827px; display: none; visibility: hidden; position: absolute; z-index: 1000;">
-
-                        @*<table width="100%" border="0" cellspacing="0" cellpadding="5">
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            Full Name
-                                        </td>
-                                        <td>
-                                            <span>Maqsood Khan</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Phone
-                                        </td>
-                                        <td>
-                                            <span>111-111-1111</span>
-                                        </td>
-                                    </tr>
-
-                                </tbody>
-                            </table>*@
-
-                    </div>
-                    <a href="PatientInfo.aspx?PATIENTID=96" target="_blank">@item.AutoNumber</a>
-
-                </td>
-                <td align="center" class="dxgv">
-                    <img src='@(item.VisitStatus1 == 1 ? "../images/grayfoldericon.png" : "../images/greenfoldericon.png")' />
-
-                </td>
-                <td align="center" class="dxgv">
-                    <span>@(item.VisitStatus1 == 0 ? "Incomplete" : item.VisitStatus1 == 1 ? "Completed" : "") </span>
-                    <br>
-                    <br>
-
-                    <span>@(item.VisitDateTime1.HasValue ? item.VisitDateTime1.Value.ToString("dd/MMM/yyyy") : "")</span>
-                    <br>
-                    <br>
-                    <span></span>
-                    <div class="noWrap" style="color: green; padding-top: 5px;">
-                        <span></span>
-                        <span></span>
-                    </div>
-                </td>
-                <td align="center" class="dxgv">
-                    @*<input name="ctl00$MainContent$gvPatients$cell0_8$ctl00$imgViewVisit2" class="pointerHover" id="MainContent_gvPatients_cell0_8_imgViewVisit2_0" type="image" src="../images/greenfoldericon.png" screenid="1" status="0" patientid="96" patientnum="01">*@
-
-                    <img src='@(item.VisitStatus2 == 1 ? "../images/grayfoldericon.png" : item.VisitStatus2 == 0 ? "../images/greenfoldericon.png" : "../images/closebutton.gif" )' />
-
-                </td>
-                <td align="center" class="dxgv">
-                    <span>@(item.VisitStatus2 == 0 ? "Incomplete" : item.VisitStatus2 == 1 ? "Completed" : "") </span>
-                    <br>
-                    <br>
-                    <span></span>
-                    <br>
-                    <br>
-                    <span>Accessible between</span>
-                    <div class="noWrap" style="color: green; padding-top: 5px;">
-
-
-                        <span>@(item.Visit2StartDate.HasValue ? item.Visit2StartDate.Value.ToString("dd/MMM/yyyy") : "") -- </span>
-                        <span>@(item.Visit2EndDate.HasValue ? item.Visit2EndDate.Value.ToString("dd/MMM/yyyy") : "")</span>
-                    </div>
-                </td>
-                <td align="center" class="dxgv">
-                    @*<input name="ctl00$MainContent$gvPatients$cell0_11$ctl00$imgViewVisit3" class="pointerHover" id="MainContent_gvPatients_cell0_11_imgViewVisit3_0" onclick="return false;" type="image" src="../images/closebutton.gif" screenid="1" status="2" patientid="96" patientnum="01">*@
-                    <img src='@(item.VisitStatus3 == 1 ? "../images/grayfoldericon.png" : item.VisitStatus3 == 0 ? "../images/greenfoldericon.png" : "../images/closebutton.gif")' />
-                </td>
-                <td align="center" class="dxgv" style="border-right-width: 0px;">
-                    <span>@(item.VisitStatus3 == 0 ? "Incomplete" : item.VisitStatus3 == 1 ? "Completed" : "") </span>
-                    <br>
-                    <br>
-                    <span></span>
-                    <br>
-                    <br>
-                    <span>@(item.Visit3StartDate.HasValue ? "Accessible between" : "")</span>
-                    <div class="noWrap" style="color: green; padding-top: 5px;">
-                        <span>@(item.Visit3StartDate.HasValue ? item.Visit3StartDate.Value.ToString("dd/MMM/yyyy") : "") -- </span>
-                        <span>
-                            @(item.Visit3EndDate.HasValue ? item.Visit3EndDate.Value.ToString("dd/MMM/yyyy") : "")
-                        </span>
-                    </div>
-                </td>
+                <th>
+                    Patient<br>Info
+                </th>
+                <th>
+                    Visit 1 e-CRF
+                </th>
+                <th>
+                    Status
+                </th>
+                <th>
+                    Visit 2 e-CRF
+                </th>
+                <th>
+                    Status
+                </th>
+                <th>
+                    Visit 3 e-CRF
+                </th>
+                <th>
+                    Status
+                </th>
             </tr>
-        }
+        </thead>
+        <tbody id="tblBody"></tbody>
+    </table>
 
-        <tr>
-            <td colspan="7">&nbsp;</td>
-        </tr>
-    </tbody>
+</div>
+
+<script type="text/x-jquery-tmpl" id="rowTempl">
+    <tr>
+        <td align="center" class="dxgv" style="vertical-align: middle;">
+            <div class="InfoBody" style="left: 774px; top: 827px; display: none; visibility: hidden; position: absolute; z-index: 1000;">
+            </div>
+            <a href="PatientInfo.aspx?PATIENTID=96" target="_blank">${AutoNumber}</a>
+        </td>
+        <td align="center" class="dxgv">
+            <img src='${VisitStatus1 == 1  ? "../images/grayfoldericon.png" : "../images/greenfoldericon.png" }' />
+        </td>
+        <td align="center" class="dxgv">
+            <span>  ${VisitStatus1 == 0  ? "Incomplete" : VisitStatus1 == 1 ? "Completed" : "" } </span>
+            <br>
+            <br>
+            <span>${VisitDateTime1}</span>
+            <br>
+            <br>
+            <span></span>
+            <div class="noWrap" style="color: green; padding-top: 5px;">
+                <span></span>
+                <span></span>
+            </div>
+        </td>
+        <td align="center" class="dxgv">
+            <img src='${VisitStatus2 == 1  ? "../images/grayfoldericon.png" : VisitStatus2 == 0 ? "../images/greenfoldericon.png" : "../images/closebutton.gif" }' />
+        </td>
+        <td align="center" class="dxgv">
+            <span>${VisitStatus2 == 0  ? "Incomplete" : VisitStatus2 == 1 ? "Completed" : "" }</span>
+            <br>
+            <br>
+            <span></span>
+            <br>
+            <br>
+            <span>Accessible between</span>
+            <div class="noWrap" style="color: green; padding-top: 5px;">
+                <span>${Visit2StartDate} -- </span>
+                <span>${Visit2EndDate}</span>
+            </div>
+        </td>
+        <td align="center" class="dxgv">
+            <img src='${VisitStatus3 == 1  ? "../images/grayfoldericon.png" : VisitStatus2 == 0 ? "../images/greenfoldericon.png" : "../images/closebutton.gif" }' />
+        </td>
+        <td align="center" class="dxgv" style="border-right-width: 0px;">
+            <span>${VisitStatus3 == 0  ? "Incomplete" : VisitStatus3 == 1 ? "Completed" : "" } </span>
+            <br>
+            <br>
+            <span></span>
+            <br>
+            <br>
+            <span>${Visit3StartDate != null ? "Accessible between"  : "" }</span>
+            <div class="noWrap" style="color: green; padding-top: 5px;">
+                <span>${Visit3StartDate != null ? Visit3StartDate  : "" } -- </span>
+                <span>
+                    ${Visit3EndDate != null ? Visit3EndDate  : "" }
+                </span>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="7">&nbsp;</td>
+    </tr>
 
 </script>
