@@ -1,0 +1,191 @@
+﻿@model Cholestabetes.Mobile.Models.V1P1
+
+@{
+    ViewBag.Title = "V1P1";
+}
+
+<h2 style="text-align:center;">V1P1</h2>
+
+<style type="text/css">
+    .heading {
+        color: red;
+        font-size: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .fs legend {
+        color: red;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-weight: bold;
+        font-style: italic;
+    }
+</style>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+
+    @*<legend>V1P1</legend>*@
+
+    <fieldset style="border: solid 1px grey;padding:5px;" class="fs">
+        <legend>Patient's consent to participate</legend>
+
+
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HighRisk_1)
+        </div>
+        <div class="editor-field">
+            @*@Html.EditorFor(model => model.HighRisk_1)
+                @Html.ValidationMessageFor(model => model.HighRisk_1)*@
+            <div data-role="fieldcontain">
+
+                <fieldset data-role="controlgroup">
+                    <input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" @(Model.HighRisk_1.Value ? "checked='checked'" : "") />
+                    <label for="checkbox-1">Yes</label>
+                </fieldset>
+            </div>
+
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HighRisk_2)
+        </div>
+        <div class="editor-field">
+            @*@Html.EditorFor(model => model.HighRisk_2)
+                @Html.ValidationMessageFor(model => model.HighRisk_2)*@
+            <div data-role="fieldcontain">
+                <fieldset data-role="controlgroup">
+                    <input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" @(Model.HighRisk_2.Value ? "checked='checked'" : "") />
+                    <label for="checkbox-1">Yes</label>
+                </fieldset>
+            </div>
+
+        </div>
+
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HighRisk_3)
+            <div class="editor-field">
+                @*@Html.EditorFor(model => model.HighRisk_3)
+                    @Html.ValidationMessageFor(model => model.HighRisk_3)*@
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup">
+                        <input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" @(Model.HighRisk_3.Value ? "checked='checked'" : "") />
+                        <label for="checkbox-1">Yes</label>
+                    </fieldset>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HighRisk_4)
+            <div class="editor-field">
+                @*@Html.EditorFor(model => model.HighRisk_4)
+                    @Html.ValidationMessageFor(model => model.HighRisk_4)*@
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup">
+                        <input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" @(Model.HighRisk_4.Value ? "checked='checked'" : "") />
+                        <label for="checkbox-1">Yes</label>
+                    </fieldset>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HighRisk_5)
+            <div class="editor-field">
+                @*@Html.EditorFor(model => model.HighRisk_5)
+                    @Html.ValidationMessageFor(model => model.HighRisk_5)*@
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup">
+                        <input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" @(Model.HighRisk_5.Value ? "checked='checked'" : "") />
+                        <label for="checkbox-1">Yes</label>
+                    </fieldset>
+                </div>
+
+            </div>
+        </div>
+
+
+    </fieldset>
+
+    <fieldset style="border: solid 1px grey;padding:5px; margin-top:10px;" class="fs">
+        <legend>Patient's consent to participate</legend>
+
+        <div class="heading">
+            Please ensure you retain a signed copy of the informed consent form in your files
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DateOfConsent)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DateOfConsent.Value)
+            @Html.ValidationMessageFor(model => model.DateOfConsent)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LastName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LastName)
+            @Html.ValidationMessageFor(model => model.LastName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FirstName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FirstName)
+            @Html.ValidationMessageFor(model => model.FirstName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DOB)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DOB.Value, "{0:dd/MM/yyyy}")
+
+
+            @Html.TextBoxFor(model => Model.DOB.Value, "{0:dd/MM/yyyy}")
+
+            @Model.DOB.Value.ToString("dd/MM/yyyy")
+
+
+            @Html.ValidationMessageFor(model => model.DOB)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Phone)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Phone)
+            @Html.ValidationMessageFor(model => model.Phone)
+        </div>
+
+    </fieldset>
+
+    <p>
+        <input type="submit" value="Save" />
+    </p>
+
+
+
+}
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

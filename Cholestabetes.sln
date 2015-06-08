@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31206.0
+VisualStudioVersion = 12.0.40418.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cholestabetes.Web", "Cholestabetes.Web\Cholestabetes.Web.csproj", "{E9781A69-3E2E-4DC9-8828-D5AC20FE62C3}"
 EndProject
@@ -22,6 +22,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cholestabetes.MVC", "Cholestabetes.MVC\Cholestabetes.MVC.csproj", "{886359ED-87E1-4B66-A084-18CCF8F1C582}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cholestabetes.Service", "Cholestabetes.Service\Cholestabetes.Service.csproj", "{D248509C-88BF-477D-A720-D6A4EA7B52DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cholestabetes.Mobile", "Cholestabetes.Mobile\Cholestabetes.Mobile.csproj", "{12BBF967-7DC2-403B-A32D-1C606F6C3EA7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -133,6 +135,16 @@ Global
 		{D248509C-88BF-477D-A720-D6A4EA7B52DE}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{D248509C-88BF-477D-A720-D6A4EA7B52DE}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{D248509C-88BF-477D-A720-D6A4EA7B52DE}.Release|x86.ActiveCfg = Release|Any CPU
+		{12BBF967-7DC2-403B-A32D-1C606F6C3EA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12BBF967-7DC2-403B-A32D-1C606F6C3EA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12BBF967-7DC2-403B-A32D-1C606F6C3EA7}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{12BBF967-7DC2-403B-A32D-1C606F6C3EA7}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{12BBF967-7DC2-403B-A32D-1C606F6C3EA7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{12BBF967-7DC2-403B-A32D-1C606F6C3EA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12BBF967-7DC2-403B-A32D-1C606F6C3EA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12BBF967-7DC2-403B-A32D-1C606F6C3EA7}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{12BBF967-7DC2-403B-A32D-1C606F6C3EA7}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{12BBF967-7DC2-403B-A32D-1C606F6C3EA7}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
