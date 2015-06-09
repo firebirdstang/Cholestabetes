@@ -45,6 +45,16 @@ namespace Cholestabetes.Domain
 
             return dateValue.ToString();
         }
-    
+
+        public static DateTime GetCanadianDateFormatted (string dt)
+        {
+            return DateTime.ParseExact(dt , "dd/M/yyyy", CultureInfo.InvariantCulture);
+        }
+
+        public static DateTime GetCanadianDateTimeFormatted(string dt)
+        {
+            return DateTime.ParseExact(dt, "dd/M/yyyy h:mm:ss", CultureInfo.InvariantCulture);
+        }
+
     }
 }

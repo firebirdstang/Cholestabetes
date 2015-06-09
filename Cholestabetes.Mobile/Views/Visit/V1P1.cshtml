@@ -46,8 +46,9 @@
             <div data-role="fieldcontain">
 
                 <fieldset data-role="controlgroup">
-                    <input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" @(Model.HighRisk_1.Value ? "checked='checked'" : "") />
-                    <label for="checkbox-1">Yes</label>
+                    <input type="checkbox" name="chkHighRisk1" id="chkHighRisk1" class="custom" @(Model.HighRisk_1.HasValue ? Model.HighRisk_1.Value ? "checked='checked'" : "" : "")
+                           value="true" />
+                    <label for="chkHighRisk1">Yes</label>
                 </fieldset>
             </div>
 
@@ -61,8 +62,9 @@
                 @Html.ValidationMessageFor(model => model.HighRisk_2)*@
             <div data-role="fieldcontain">
                 <fieldset data-role="controlgroup">
-                    <input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" @(Model.HighRisk_2.Value ? "checked='checked'" : "") />
-                    <label for="checkbox-1">Yes</label>
+                    <input value="true" type="checkbox" name="chkHighRisk2" id="chkHighRisk2" class="custom" @(Model.HighRisk_2.HasValue ? Model.HighRisk_2.Value ? "checked='checked'" : "" : "") />
+
+                    <label for="chkHighRisk2">Yes</label>
                 </fieldset>
             </div>
 
@@ -76,8 +78,9 @@
                     @Html.ValidationMessageFor(model => model.HighRisk_3)*@
                 <div data-role="fieldcontain">
                     <fieldset data-role="controlgroup">
-                        <input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" @(Model.HighRisk_3.Value ? "checked='checked'" : "") />
-                        <label for="checkbox-1">Yes</label>
+                        <input value="true" type="checkbox" name="chkHighRisk3" id="chkHighRisk3" class="custom" @( Model.HighRisk_3.HasValue ? Model.HighRisk_3.Value ? "checked='checked'" : "" : "") />
+
+                        <label for="chkHighRisk3">Yes</label>
                     </fieldset>
                 </div>
 
@@ -93,8 +96,9 @@
                     @Html.ValidationMessageFor(model => model.HighRisk_4)*@
                 <div data-role="fieldcontain">
                     <fieldset data-role="controlgroup">
-                        <input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" @(Model.HighRisk_4.Value ? "checked='checked'" : "") />
-                        <label for="checkbox-1">Yes</label>
+                        <input value="true" type="checkbox" name="chkHighRisk4" id="chkHighRisk4" class="custom" @(Model.HighRisk_4.HasValue ? Model.HighRisk_4.Value ? "checked='checked'" : "" : "") />
+
+                        <label for="chkHighRisk4">Yes</label>
                     </fieldset>
                 </div>
 
@@ -109,8 +113,8 @@
                     @Html.ValidationMessageFor(model => model.HighRisk_5)*@
                 <div data-role="fieldcontain">
                     <fieldset data-role="controlgroup">
-                        <input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" @(Model.HighRisk_5.Value ? "checked='checked'" : "") />
-                        <label for="checkbox-1">Yes</label>
+                        <input value="true" type="checkbox" name="chkHighRisk5" id="chkHighRisk5" class="custom" @(Model.HighRisk_5.HasValue ? Model.HighRisk_5.Value ? "checked='checked'" : "" : "") />
+                        <label for="chkHighRisk5">Yes</label>
                     </fieldset>
                 </div>
 
@@ -131,8 +135,10 @@
             @Html.LabelFor(model => model.DateOfConsent)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.DateOfConsent.Value)
+
+            @Html.EditorFor(model => model.DateOfConsent)
             @Html.ValidationMessageFor(model => model.DateOfConsent)
+
         </div>
 
         <div class="editor-label">
@@ -155,14 +161,7 @@
             @Html.LabelFor(model => model.DOB)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.DOB.Value, "{0:dd/MM/yyyy}")
-
-
-            @Html.TextBoxFor(model => Model.DOB.Value, "{0:dd/MM/yyyy}")
-
-            @Model.DOB.Value.ToString("dd/MM/yyyy")
-
-
+            @Html.EditorFor(model => model.DOB)
             @Html.ValidationMessageFor(model => model.DOB)
         </div>
 
@@ -170,6 +169,7 @@
             @Html.LabelFor(model => model.Phone)
         </div>
         <div class="editor-field">
+             
             @Html.EditorFor(model => model.Phone)
             @Html.ValidationMessageFor(model => model.Phone)
         </div>
@@ -177,15 +177,12 @@
     </fieldset>
 
     <p>
-        <input type="submit" value="Save" />
+        <input type="submit" value="Next" />
     </p>
-
-
 
 }
 
-
-
 @section Scripts {
+
     @Scripts.Render("~/bundles/jqueryval")
 }

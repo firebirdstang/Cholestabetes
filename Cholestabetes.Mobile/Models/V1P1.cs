@@ -27,9 +27,9 @@ namespace Cholestabetes.Mobile.Models
         [DisplayName("Prior history of PAD <i>(AFB, Stent, or ABI < 0.7 with symptoms of intermittent claudication)</i>")]
         public bool? HighRisk_5 { get; set; }
 
-
+        [DataType(DataType.Date)]
         [Display(Name = "Date Of Consent")]
-        [DataType(DataType.Date), DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        //[DataType(DataType.Date), DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         [Required(ErrorMessage = "Date Of Consent Required")]
         public DateTime? DateOfConsent { get; set; }
 
@@ -40,9 +40,9 @@ namespace Cholestabetes.Mobile.Models
         [Required(ErrorMessage = "Firstname Required")]
         public string FirstName { get; set; }
 
-
+        [DataType(DataType.Date)]
         [Display(Name = "DOB")]
-        [DataType(DataType.Date), DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        //[DataType(DataType.Date), DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         [Required(ErrorMessage = "DOB Required")]
         public DateTime? DOB { get; set; }
 
