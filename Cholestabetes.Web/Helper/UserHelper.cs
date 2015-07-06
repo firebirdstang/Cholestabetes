@@ -19,6 +19,9 @@ namespace Cholestabetes.Web.Helper
             return httpCookie;
         }
 
+
+
+       
         public static Domain.User GetLoggedInUser(System.Web.SessionState.HttpSessionState session)
         {
             if (session[Constants.USER] == null)
@@ -54,6 +57,9 @@ namespace Cholestabetes.Web.Helper
             }
 
         }
+
+
+       
 
     }
 }

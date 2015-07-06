@@ -9,7 +9,10 @@ namespace Cholestabetes.Web.Helper
 {
     public class Constants
     {
-
+        public Constants()
+        {
+        }
+        
         public static readonly int    NOID              = -1;
        
         public static readonly string ID                = "ID";
