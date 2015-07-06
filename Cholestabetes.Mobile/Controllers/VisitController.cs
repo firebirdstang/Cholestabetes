@@ -21,6 +21,12 @@ namespace Cholestabetes.Mobile.Controllers
         }
 
 
+        public ActionResult MOU()
+        {
+            return View();
+        }
+
+ 
         public ActionResult V1P1()
         {
 

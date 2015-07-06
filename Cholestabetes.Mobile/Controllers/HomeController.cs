@@ -12,9 +12,9 @@ namespace Cholestabetes.Mobile.Controllers
         {
             ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
 
-            //return View();
+           return View();
 
-            return Redirect("Visit/V1P1");
+           // return Redirect("Visit/V1P1");
         }
 
         public ActionResult About()
