@@ -1,8 +1,9 @@
-﻿@{
+﻿@model Cholestabetes.Domain.User
+
+@{
     ViewBag.Title = "MOU";
     Layout = "~/Views/Shared/_Layout_Demo.cshtml";
 }
-
 <!-- banner & title -->
 @*<div class="bannerContainer">
         <img src="../assets/images/headers/1.jpg" class="banner">
@@ -13,63 +14,67 @@
 </div>
 <!-- /banner & title -->
 
+<style type="text/css">
+    .heading {
+        color: red;
+        font-size: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
 
+    .fs legend {
+        color: red;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    .success {
+        color: green;
+    }
+
+    .fail {
+        color: red;
+    }
+</style>
 
 <div class="content-padd">
+    <div style="padding-left: 10px">
+        <a href='@Url.Action("Index", "Home")'>
+            <img src="~/assets/images/nav-icons/home.png" />
+        </a>
+    </div>
+    <h3>INSTRUCTIONS</h3>
 
-    <h3>1 Column Layout</h3>
-
-    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.</p>
-    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.</p>
-    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.</p>
-
+    <ul>
+        <li>
+            Acknowledging that you have reviewed and agree to the terms of the MOU is a mandatory
+            requirement
+        </li>
+        <li>Please review the MOU in its entirety by scrolling to the end of the form.</li>
+        <li>
+            Once you have reviewed the MOU, check the "Agree to Terms" box and click the "Submit"
+            button
+        </li>
+        <li>
+            Once the MOU is completed, the status in your dashboard will change to a checkmark
+            (<img src="../images/check.png" />)
+        </li>
+    </ul>
 
     <div id="rightbox">
-        <table width="100%" cellspacing="0" border="0">
-            <tr>
-                <td align="center" style="font-size: 25px; font-weight: bold; color: #900; font-family: Arial, Helvetica, sans-serif">
-                    MEMORANDUM OF UNDERSTANDING (MOU)
-                </td>
-            </tr>
-        </table>
-        <br />
-        <div style="padding-left: 10px">
-            <a href='@Url.Action("Index", "Home")'>
-                <img src="~/assets/images/nav-icons/home.png" />
-            </a>
-        </div>
-        <div style="background-image: url(images/watermark.png); padding: 20px; background-repeat: no-repeat;
-            font-family: Arial, Helvetica, sans-serif; font-size: 14px">
+
+
+
+        <div style="background-image: url(../images/watermark.png); padding: 20px; background-repeat: no-repeat;
+            font-family: Arial, Helvetica, sans-serif; ">
             <table width="100%" border="0" bgcolor="#CC0000" cellpadding="10"></table>
-            <table width="90%" border="0" align="center" cellpadding="10" bgcolor="#CCCCCC">
-                <tr>
-                    <td bgcolor="#000000">
-                        <span style="color: #FFF; font-size: 30px">INSTRUCTIONS</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td height="166">
-                        <ul>
-                            <li>
-                                Acknowledging that you have reviewed and agree to the terms of the MOU is a mandatory
-                                requirement
-                            </li>
-                            <li>Please review the MOU in its entirety by scrolling to the end of the form.</li>
-                            <li>
-                                Once you have reviewed the MOU, check the "Agree to Terms" box and click the "Submit"
-                                button
-                            </li>
-                            <li>
-                                Once the MOU is completed, the status in your dashboard will change to a checkmark
-                                (<img src="../images/check.png" />)
-                            </li>
-                    </td>
-                </tr>
-            </table>
+
             <br />
             <br />
-            <table width="90%" border="1" bordercolor="#000000" bgcolor="#FFFFFF" cellpadding="15"
-                   align="center" style="font-size: 12px;">
+            <table width="100%" border="1" bordercolor="#000000" bgcolor="#FFFFFF" cellpadding="15"
+                   align="center">
                 <tr>
                     <td>
                         Thank you for agreeing to participate in the <strong>CHOLEST</strong>erol lowering
@@ -172,13 +177,13 @@
                     </td>
                 </tr>
             </table>
-            <div style="text-align: center; font-size: 11px; padding: 10px">
+            <div style="text-align: center;  padding: 10px">
                 To view/print this document, please click <a href="../PDF/CHOLESTABETES QuERI Memorandum of Understanding Final.pdf"
                                                              target="_blank">here</a>.
             </div>
         </div>
         <div>
-            <table width="90%" cellpadding="15" align="center" style="font-size: 12px; border: 2px solid #CC0000;"
+            <table width="90%" cellpadding="15" align="center" style="border: 2px solid #CC0000;"
                    bordercolor="#CC0000">
                 <tr>
                     <td>
@@ -187,22 +192,45 @@
                         <br />
                         <table width="100%" border="0">
                             <tr>
-                                <td valign="top">
-                                    @*<div data-role="fieldcontain">
-                                        <fieldset data-role="controlgroup">
-                                            <input value="true" type="checkbox" name="chkMOUTerms2" id="chkMOUTerms2" class="custom" />
-                                        </fieldset>
-                                    </div>*@
 
-
-                                    
-
-
-
-                                </td>
                                 <td>
                                     I have read and agree to the terms of the Memorandum of Understanding and certify
                                     that I hold a valid license to practice medicine in Canada.
+                                </td>
+                            </tr>
+                            <tr>
+
+                                <td>
+                                    <fieldset data-role="controlgroup">
+
+                                        @*@using (Html.BeginForm("MOU", "Visit"))
+                                            {
+
+                                                @Html.CheckBox(
+
+                                                            "chkMOU",
+                                                            Model.MOU.HasValue ? Model.MOU.Value : false
+                                                        )
+                                                <label for="chkMOU">Yes</label>
+                                                <br />
+                                                <input type="submit" value="Submit" />
+                                            }*@
+
+
+                                        @Html.CheckBox(
+                                           "chkMOU2",
+                                           Model.MOU.HasValue ? Model.MOU.Value : false
+                                           )
+                                        <label for="chkMOU2">Yes</label>
+
+
+                                        <button onclick="Test()">Submit</button>
+
+                                    </fieldset>
+
+                                    <div id="divResult">
+
+                                    </div>
                                 </td>
                             </tr>
                         </table>
@@ -210,45 +238,63 @@
                 </tr>
             </table>
             <br />
-            <br />
-            <table width="90%" border="0" align="center" style="padding-bottom: 10px;">
-                <tr>
-                    <td align="center">
-                        <asp:Label runat="server" ID="lblMssg" CssClass="info" />
-                    </td>
-                </tr>
-                <tr>
-                    <td align="right">
-                        <asp:Button ID="btnSubmit" runat="server" CssClass="btnSubmit" OnClick="btnSubmit_Click" />
-                    </td>
-                </tr>
-            </table>
         </div>
     </div>
-
-
- 
-
 </div>
 
-<fieldset style="border: solid 1px grey;padding:5px;" class="fs">
-    <legend>Patient's consent to participate</legend>
-    <div class="editor-label">
 
-    </div>
-    <div class="editor-field">
+<script type="text/javascript">
 
-        <div data-role="fieldcontain">
+    function Test() {
 
-            <fieldset data-role="controlgroup">
-                <input type="checkbox" class="custom"
-                       value="true" />
-                <label for="chkHighRisk1">Yes</label>
-            </fieldset>
-        </div>
+        var ischecked = $('#chkMOU2').is(':checked');
 
-    </div>
-</fieldset>
+        var request = $.ajax({
+            type: 'GET',
+            url: '/Visit/UpdateMOU',
+            async: true,
+            data: { chkMOU: ischecked },
+
+        });
+
+
+        request.done(function (mainData) {
+
+            var result = mainData.Result;
+            var str = result == 1 ? "Changes Saved" : "Error Occurred";
+
+            $('#divResult').html('');
+            $('#divResult').html(str);
+
+
+            var className = result == 1 ? "success" : "fail";
+
+            $('#divResult').attr("class", className);
+
+        });
+
+        request.always(function () {
+
+
+        });
+
+        request.fail(function (jqXHR, textStatus) {
+
+            alert("Error in MOU");
+
+        });
+
+    }
+
+</script>
+
+
+
+
+
+
+
+
 
 
 

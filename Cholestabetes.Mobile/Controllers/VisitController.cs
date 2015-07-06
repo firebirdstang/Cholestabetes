@@ -1,4 +1,5 @@
 ﻿using Cholestabetes.Domain;
+using Cholestabetes.Mobile.Helper;
 using Cholestabetes.Mobile.Models;
 using Cholestabetes.Repositories;
 using System;
@@ -7,6 +8,7 @@ using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace Cholestabetes.Mobile.Controllers
 {
@@ -14,7 +16,7 @@ namespace Cholestabetes.Mobile.Controllers
     {
         int patientID = 60;
         VisitRepository visRepos = new VisitRepository();
-
+        
         public ActionResult Index()
         {
             return View();
@@ -23,7 +25,52 @@ namespace Cholestabetes.Mobile.Controllers
 
         public ActionResult MOU()
         {
-            return View();
+            
+          Domain.User user = Cholestabetes.Mobile.Helper.UserUtility.GetLoggedInUser(Session, User.Identity.Name) as Domain.User;
+
+          return View(user);
+        }
+
+        [HttpPost]
+        public ActionResult MOU(bool chkMOU)
+        {
+
+            PhysicianRepository physicianRepos = new PhysicianRepository();
+
+            physicianRepos.UpdateMOU(User.Identity.Name, chkMOU ? 1 : 0);
+
+            UserUtility.ReloadUser(Session, User.Identity.Name);
+
+            Domain.User user = Cholestabetes.Mobile.Helper.UserUtility.GetLoggedInUser(Session, User.Identity.Name) as Domain.User;
+
+            return View(user);
+                
+        }
+
+        
+        public JsonResult UpdateMOU(bool chkMOU)
+        {
+            bool errored = false;
+            
+            try 
+	        {	        
+		        
+                 PhysicianRepository physicianRepos = new PhysicianRepository();
+
+                physicianRepos.UpdateMOU(User.Identity.Name, (chkMOU ? 1 : 0) );
+
+                UserUtility.ReloadUser(Session, User.Identity.Name);
+
+                Domain.User user = Cholestabetes.Mobile.Helper.UserUtility.GetLoggedInUser(Session, User.Identity.Name) as Domain.User;
+	        }
+	        catch (Exception)
+	        {
+		        errored = true;
+		        
+	        }
+
+            return Json(new { Result = errored ? 0 : 1 }, JsonRequestBehavior.AllowGet);
+
         }
 
  
@@ -42,11 +89,11 @@ namespace Cholestabetes.Mobile.Controllers
                 data.HighRisk_4 = lst[3].Answer[0].Value == "1";
                 data.HighRisk_5 = lst[4].Answer[0].Value == "1";
 
-                data.DateOfConsent = Helper.GetCanadianDate(lst[5].Answer[0].Value);
+                data.DateOfConsent = Domain.Helper.GetCanadianDate(lst[5].Answer[0].Value);
 
                 data.LastName = lst[6].Answer[0].Value;
                 data.FirstName = lst[7].Answer[0].Value;
-                data.DOB = Helper.GetCanadianDate(lst[8].Answer[0].Value);
+                data.DOB = Domain.Helper.GetCanadianDate(lst[8].Answer[0].Value);
                 data.Phone = lst[9].Answer[0].Value;
             }
 

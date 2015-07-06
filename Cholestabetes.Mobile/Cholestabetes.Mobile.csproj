@@ -156,6 +156,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helper\UserHelper.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Enums.cs" />
     <Compile Include="Models\V1P1.cs" />
@@ -525,6 +526,10 @@
     <ProjectReference Include="..\Cholestabetes.Repositories\Cholestabetes.Repositories.csproj">
       <Project>{c9ec5f46-883f-41c9-920d-d4718e9e25c7}</Project>
       <Name>Cholestabetes.Repositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cholestabetes.Web\Cholestabetes.Web.csproj">
+      <Project>{e9781a69-3e2e-4dc9-8828-d5ac20fe62c3}</Project>
+      <Name>Cholestabetes.Web</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

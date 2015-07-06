@@ -8,13 +8,18 @@ namespace Cholestabetes.Mobile.Controllers
 {
     public class HomeController : Controller
     {
+        
+        
         public ActionResult Index()
         {
             ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
 
-           return View();
-
-           // return Redirect("Visit/V1P1");
+            if( string.IsNullOrEmpty(User.Identity.Name))
+            {
+                return RedirectToAction("Login", "Account");
+            }
+            else
+                return View();
         }
 
         public ActionResult About()

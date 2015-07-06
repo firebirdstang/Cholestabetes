@@ -6,6 +6,9 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using System.Web.Security;
 using Cholestabetes.Mobile.Models;
+using Cholestabetes.Repositories;
+using Cholestabetes.Web.Helper;
+using Cholestabetes.Mobile.Helper;
 
 namespace Cholestabetes.Mobile.Controllers
 {
@@ -38,11 +41,42 @@ namespace Cholestabetes.Mobile.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Login(LoginModel model, string returnUrl)
         {
+             UserRepository userRepo = new UserRepository();
+
+ 
+            
             if (ModelState.IsValid)
             {
-                if (Membership.ValidateUser(model.UserName, model.Password))
+                //if (Membership.ValidateUser(model.UserName, model.Password))
+                //{
+                //    FormsAuthentication.SetAuthCookie(model.UserName, model.RememberMe);
+                //    if (Url.IsLocalUrl(returnUrl))
+                //    {
+                //        return Redirect(returnUrl);
+                //    }
+                //    else
+                //    {
+                //        return RedirectToAction("Index", "Home");
+                //    }
+                //}
+                //else
+                //{
+                //    ModelState.AddModelError("", "The user name or password provided is incorrect.");
+                //}
+                
+                if (userRepo.AutheticateUser(model.UserName, model.Password))
                 {
+                    string[] userRoles = userRepo.GetRolesAsArray(model.UserName);
+
+                    Domain.User loggedUser = userRepo.GetUserDetails(model.UserName);
+
+                    loggedUser.Roles.AddRange(userRoles);
+
+                    UserUtility.SetLoggedInUser(loggedUser, Session);
+
                     FormsAuthentication.SetAuthCookie(model.UserName, model.RememberMe);
+                 
+                    
                     if (Url.IsLocalUrl(returnUrl))
                     {
                         return Redirect(returnUrl);
@@ -56,6 +90,7 @@ namespace Cholestabetes.Mobile.Controllers
                 {
                     ModelState.AddModelError("", "The user name or password provided is incorrect.");
                 }
+
             }
 
             // If we got this far, something failed, redisplay form
